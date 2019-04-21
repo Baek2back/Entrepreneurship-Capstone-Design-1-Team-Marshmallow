@@ -2,9 +2,11 @@ package com.capstone.seoae;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.AssetManager;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.location.Location;
@@ -17,6 +19,7 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -35,20 +38,23 @@ import com.skt.Tmap.TMapPoint;
 import com.skt.Tmap.TMapPolyLine;
 import com.skt.Tmap.TMapView;
 
+import java.io.File;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
-    private static final int READ_PERMISSION_REQUEST = 100;
-    private static final int OPEN_DOCUMENT_REQUEST = 101;
-
+    private AssetManager assetManager;
     private FrameLayout frameMap;
     private ProgressBar progressBar;
     private ViewGroup containerView;
-    @Nullable private ModelSurfaceView modelView;
-    private SeoaeNaviApplication app;
+    @Nullable private ModelSurfaceView gLView;
+    private SceneLoader scene;
+
+    public static InputStream is1 = null;
+    public static InputStream is2 = null;
 
     private GpsManager gpsManager;
     private PathManager pathManager;
@@ -63,12 +69,21 @@ public class MainActivity extends AppCompatActivity {
     private Timer timer;
     private TimerTask timerTask;
 
+    private float[] backgroundColor = new float[]{0.2f, 0.2f, 0.2f, 1.0f};
+
+
     @Nullable
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        app = SeoaeNaviApplication.getInstance();
+        assetManager = getAssets();
+        try {
+            ContentsUtils.providedModel.put("cowboy.dae",assetManager);
+            ContentsUtils.providedModel.put("cowboy.png",assetManager);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         containerView = findViewById(R.id.containerView);
         progressBar = findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
@@ -76,131 +91,43 @@ public class MainActivity extends AppCompatActivity {
         frameMap.bringToFront();
         setTMapView();
 
-        findViewById(R.id.openBrowser).setOnClickListener((View v) -> checkReadPermissionThenOpen());
+        //findViewById(R.id.openBrowser).setOnClickListener((View v) -> checkReadPermissionThenOpen());
         findViewById(R.id.requestRoute).setOnClickListener((View v) -> startNavigationMode());
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        createNewModelView(app.getCurrentModel());
-        if (app.getCurrentModel() != null) {
-            setTitle(app.getCurrentModel().getTitle());
-        }
+
+        scene = new SceneLoader(this);
+        scene.init();
+
+        gLView = new ModelSurfaceView(this);
+        addContentView(gLView,new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,FrameLayout.LayoutParams.MATCH_PARENT));
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        if (modelView != null) {
-            modelView.onPause();
+        if (gLView != null) {
+            gLView.onPause();
         }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        if (modelView != null) {
-            modelView.onResume();
+        if (gLView != null) {
+            gLView.onResume();
         }
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
-                                           @NonNull int[] grantResults) {
-        switch (requestCode) {
-            case READ_PERMISSION_REQUEST:
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    beginOpenModel();
-                } else {
-                    Toast.makeText(this, "Please allow read permission to open model files.", Toast.LENGTH_SHORT).show();
-                }
-                break;
-            default:
-                break;
-        }
-    }
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent resultData) {
-        if (requestCode == OPEN_DOCUMENT_REQUEST && resultCode == RESULT_OK && resultData.getData() != null) {
-            Uri uri = resultData.getData();
-            grantUriPermission(getPackageName(), uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            beginLoadModel(uri);
-        }
-    }
-
-    private void checkReadPermissionThenOpen() {
-        if ((ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED)
-                && Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                    READ_PERMISSION_REQUEST);
-        } else {
-            findViewById(R.id.openBrowser).setVisibility(View.GONE);
-            findViewById(R.id.requestRoute).setVisibility(View.VISIBLE);
-            beginOpenModel();
-        }
-    }
-
-    private void beginOpenModel() {
-        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-        intent.setType("*/*");
-        startActivityForResult(intent, OPEN_DOCUMENT_REQUEST);
-    }
-
-    private void beginLoadModel(@NonNull Uri uri) {
-        progressBar.setVisibility(View.VISIBLE);
-        new ModelLoadTask().execute(uri);
-    }
-
-    private void createNewModelView(@Nullable Model model) {
-        if (modelView != null) {
-            containerView.removeView(modelView);
-        }
-        SeoaeNaviApplication.getInstance().setCurrentModel(model);
-        modelView = new ModelSurfaceView(this, model);
-        containerView.addView(modelView, 0);
-    }
-
-    private class ModelLoadTask extends AsyncTask<Uri, Integer, Model> {
-        protected Model doInBackground(Uri... file) {
-            InputStream stream = null;
-            try {
-                Uri uri = file[0];
-                ContentResolver cr = getApplicationContext().getContentResolver();
-                stream = cr.openInputStream(uri);
-                if (stream != null) {
-                    Model model = new ObjModel(stream);
-                    return model;
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                Util.closeSilently(stream);
-            }
-            return null;
-        }
-
-        protected void onProgressUpdate(Integer... progress) {}
-        protected void onPostExecute(Model model) {
-            if (isDestroyed()) {
-                return;
-            }
-            if (model != null) {
-                setCurrentModel(model);
-            } else {
-                Toast.makeText(getApplicationContext(), "Failed to load model.", Toast.LENGTH_SHORT).show();
-                progressBar.setVisibility(View.GONE);
-            }
-        }
-    }
-
+    /*
     private void setCurrentModel(@NonNull Model model) {
         createNewModelView(model);
         Toast.makeText(getApplicationContext(), "Model loaded successfully.", Toast.LENGTH_SHORT).show();
         progressBar.setVisibility(View.GONE);
-    }
+    }*/
 
 
     private void setTMapView() {
@@ -406,11 +333,11 @@ public class MainActivity extends AppCompatActivity {
             nearestLocation.setLongitude(nearestPoint.getLongitude());
             nearestLocation.setLatitude(nearestPoint.getLatitude());
             float direction = Math.round(directionManager.getDirectionBetween(currentLocation, nearestLocation));
-            modelView.getRenderer().setAngleY(direction);
+            //modelView.getRenderer().setAngleY(direction);
             findViewById(R.id.indicateDirection).setRotation(direction);
             findViewById(R.id.indicateDirection).bringToFront();
 
-            modelView.requestRender();
+            //modelView.requestRender();
         } catch (Exception ex) {}
     }
     private void moveToCurrentLocation() {
@@ -421,5 +348,17 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception ex) {
             Toast.makeText(this, "Can't not find current location.", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public float[] getBackgroundColor() {
+        return backgroundColor;
+    }
+
+    public SceneLoader getScene() {
+        return scene;
+    }
+
+    public ModelSurfaceView getGLView() {
+        return gLView;
     }
 }
