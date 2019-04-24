@@ -8,7 +8,6 @@ import android.os.AsyncTask;
 
 import com.capstone.seoae.model.Object3DData;
 
-import org.apache.commons.io.IOUtils;
 
 import java.io.InputStream;
 import java.util.List;

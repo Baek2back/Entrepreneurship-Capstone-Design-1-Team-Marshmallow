@@ -1,6 +1,5 @@
 package com.capstone.seoae.service.wavefront;
 
-import android.net.Uri;
 import android.opengl.GLES20;
 import android.util.Log;
 
@@ -20,8 +19,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.StringTokenizer;
-
-import androidx.annotation.Nullable;
 
 public class WavefrontLoader {
     private static final float DUMMY_Z_TC = -5.0f;
@@ -94,34 +91,6 @@ public class WavefrontLoader {
     public ModelDimensions getDimensions() {
         return modelDims;
     }
-    /*
-    @Nullable
-    public static String getMaterialLib(Uri uri){
-        return getParameter(uri, "mtllib ");
-    }
-
-    @Nullable
-    public static String getTextureFile(Uri uri){
-        return getParameter(uri, "map_Kd ");
-    }
-
-    @Nullable
-    private static String getParameter(Uri uri, String parameter) {
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(ContentUtils.getInputStream(uri)))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                line = line.trim();
-                if (line.startsWith(parameter)) {
-                    return line.substring(parameter.length());
-                }
-            }
-        } catch (IOException e) {
-            Log.e("WavefrontLoader", "Problem reading file '" + uri + "': " + e.getMessage(), e);
-            throw new RuntimeException(e);
-        }
-        return null;
-    }
-    */
     /**
      * Count verts, normals, faces etc and reserve buffers to save the data.
      * @param is data source
@@ -760,31 +729,6 @@ public class WavefrontLoader {
         public Tuple3 getKs() {
             return ks;
         }
-
-        public void setMaterialColors(GLES20 gl)
-        // start rendering using this material's colour information
-        {
-            // if (ka != null) { // ambient color
-            // float[] colorKa = {ka.getX(), ka.getY(), ka.getZ(), 1.0f};
-            // gl.glMaterialfv(GLES20.GL_FRONT_AND_BACK, GLES20.GL_AMBIENT, colorKa, 0);
-            // }
-            // if (kd != null) { // diffuse color
-            // float[] colorKd = {kd.getX(), kd.getY(), kd.getZ(), 1.0f};
-            // gl.glMaterialfv(GLES20.GL_FRONT_AND_BACK, GLES20.GL_DIFFUSE, colorKd, 0);
-            // }
-            // if (ks != null) { // specular color
-            // float[] colorKs = {ks.getX(), ks.getY(), ks.getZ(), 1.0f};
-            // gl.glMaterialfv(GLES20.GL_FRONT_AND_BACK, GLES20.GL_SPECULAR, colorKs, 0);
-            // }
-            //
-            // if (ns != 0.0f) { // shininess
-            // gl.glMaterialf(GLES20.GL_FRONT_AND_BACK, GLES20.GL_SHININESS, ns);
-            // }
-            //
-            // if (d != 1.0f) { // alpha
-            // // not implemented
-            // }
-        } // end of setMaterialColors()
 
         // --------- set/get methods for texture info --------------
 

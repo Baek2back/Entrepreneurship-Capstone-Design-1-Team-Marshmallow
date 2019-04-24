@@ -1,36 +1,24 @@
 package com.capstone.seoae;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.ContentResolver;
-import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.location.Location;
 import android.location.LocationListener;
-import android.net.Uri;
-import android.os.AsyncTask;
-import android.os.Build;
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.capstone.seoae.model.Object3DData;
 import com.capstone.seoae.util.*;
 import com.capstone.seoae.manager.*;
-import com.capstone.seoae.model.*;
 
 import com.skt.Tmap.TMapData;
 import com.skt.Tmap.TMapMarkerItem;
@@ -38,23 +26,16 @@ import com.skt.Tmap.TMapPoint;
 import com.skt.Tmap.TMapPolyLine;
 import com.skt.Tmap.TMapView;
 
-import java.io.File;
-import java.io.InputStream;
-import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
     private AssetManager assetManager;
     private FrameLayout frameMap;
-    private ProgressBar progressBar;
-    private ViewGroup containerView;
     @Nullable private ModelSurfaceView gLView;
     private SceneLoader scene;
-
-    public static InputStream is1 = null;
-    public static InputStream is2 = null;
 
     private GpsManager gpsManager;
     private PathManager pathManager;
@@ -69,14 +50,13 @@ public class MainActivity extends AppCompatActivity {
     private Timer timer;
     private TimerTask timerTask;
 
-    private float[] backgroundColor = new float[]{0.2f, 0.2f, 0.2f, 1.0f};
-
-
     @Nullable
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /* assets 폴더에 저장되어 있는 모델 및 텍스쳐 Load를 위해 AssetManager 사용.
+           사용하기 희망하는 파일 명을 HashMap에 등록하여 전달하게 된다. */
         assetManager = getAssets();
         try {
             ContentsUtils.providedModel.put("cowboy.dae",assetManager);
@@ -84,24 +64,21 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        containerView = findViewById(R.id.containerView);
-        progressBar = findViewById(R.id.progressBar);
-        progressBar.setVisibility(View.GONE);
+
         frameMap = findViewById(R.id.frameMap);
         frameMap.bringToFront();
         setTMapView();
 
-        //findViewById(R.id.openBrowser).setOnClickListener((View v) -> checkReadPermissionThenOpen());
+        findViewById(R.id.moveCurrent).setOnClickListener((View v) -> moveToCurrentLocation());
         findViewById(R.id.requestRoute).setOnClickListener((View v) -> startNavigationMode());
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-
         scene = new SceneLoader(this);
         scene.init();
-
         gLView = new ModelSurfaceView(this);
         addContentView(gLView,new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,FrameLayout.LayoutParams.MATCH_PARENT));
     }
@@ -109,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if (gLView != null) {
+        if(gLView != null) {
             gLView.onPause();
         }
     }
@@ -117,33 +94,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if (gLView != null) {
+        if(gLView != null) {
             gLView.onResume();
         }
     }
 
-    /*
-    private void setCurrentModel(@NonNull Model model) {
-        createNewModelView(model);
-        Toast.makeText(getApplicationContext(), "Model loaded successfully.", Toast.LENGTH_SHORT).show();
-        progressBar.setVisibility(View.GONE);
-    }*/
-
-
-    private void setTMapView() {
-        tMapView = new TMapView(this);
-        tMapView.setSKTMapApiKey("60b0ad2d-ac33-4752-8ce0-0eab498ba23b");
-        tMapView.setIconVisibility(true);
-        tMapView.setZoomLevel(16);
-        tMapView.setCompassMode(false);
-        tMapView.setTrackingMode(true);
-        // TODO : 현재는 대청마루를 목적지로 설정해 두었음. 추후에 경유지 혹은 목적지 추가 해야함.
-        TMapPoint daecheong = new TMapPoint(37.561278, 126.997088);
-        frameMap.addView(tMapView);
-        setDestination(daecheong);
-    }
-
-    private void startNavigationMode() {
+    private void initSensor() {
         try {
             // initialize GPSManager
             GpsManager.init(this);
@@ -165,9 +121,25 @@ public class MainActivity extends AppCompatActivity {
             sensorManager.registerListener(directionManager.sensorEventListener, magSensor, SensorManager.SENSOR_DELAY_UI);
 
             moveToCurrentLocation();
+        }catch (Exception e) {}
+    }
 
-            setNavigationMode(!isNavigationMode);
-        }catch (Exception ex) {}
+    private void setTMapView() {
+        tMapView = new TMapView(this);
+        tMapView.setSKTMapApiKey("60b0ad2d-ac33-4752-8ce0-0eab498ba23b");
+        tMapView.setIconVisibility(true);
+        tMapView.setZoomLevel(14);
+        tMapView.setCompassMode(false);
+        tMapView.setTrackingMode(true);
+        // TODO : 현재는 대청마루를 목적지로 설정해 두었음. 추후에 경유지 혹은 목적지 추가 해야함.
+        TMapPoint daecheong = new TMapPoint(37.561278, 126.997088);
+        frameMap.addView(tMapView);
+        setDestination(daecheong);
+        initSensor();
+    }
+
+    private void startNavigationMode() {
+        setNavigationMode(!isNavigationMode);
     }
 
     public LocationListener locationListener = new LocationListener() {
@@ -204,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
         {
             try {
                 findViewById(R.id.indicateDirection).setVisibility(View.VISIBLE);
-                tMapView.setZoomLevel(20);
+                tMapView.setZoomLevel(18);
                 TMapData tMapData = new TMapData();
                 Location currentLocation = gpsManager.getCurrentLocation();
                 final TMapPoint startPoint = new TMapPoint(currentLocation.getLatitude(), currentLocation.getLongitude());
@@ -333,11 +305,9 @@ public class MainActivity extends AppCompatActivity {
             nearestLocation.setLongitude(nearestPoint.getLongitude());
             nearestLocation.setLatitude(nearestPoint.getLatitude());
             float direction = Math.round(directionManager.getDirectionBetween(currentLocation, nearestLocation));
-            //modelView.getRenderer().setAngleY(direction);
+            scene.getObjects().get(0).setRotationZ(-direction+180f);
             findViewById(R.id.indicateDirection).setRotation(direction);
             findViewById(R.id.indicateDirection).bringToFront();
-
-            //modelView.requestRender();
         } catch (Exception ex) {}
     }
     private void moveToCurrentLocation() {
@@ -348,10 +318,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception ex) {
             Toast.makeText(this, "Can't not find current location.", Toast.LENGTH_SHORT).show();
         }
-    }
-
-    public float[] getBackgroundColor() {
-        return backgroundColor;
     }
 
     public SceneLoader getScene() {

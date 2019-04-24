@@ -27,6 +27,9 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 
     private final static String TAG = ModelRenderer.class.getName();
 
+    private SceneLoader scene;
+    private SceneCamera sceneCamera;
+
     // 3D window (parent component)
     private ModelSurfaceView main;
     // width of the screen
@@ -39,12 +42,8 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
     private static final float far = 100f;
 
     private DrawerFactory drawer;
-    // The wireframe associated shape (it should be made of lines only)
-    private Map<Object3DData, Object3DData> wireframes = new HashMap<Object3DData, Object3DData>();
     // The loaded textures
     private Map<byte[], Integer> textures = new HashMap<byte[], Integer>();
-    // The corresponding opengl bounding boxes and drawer
-    private Map<Object3DData, Object3DData> boundingBoxes = new HashMap<Object3DData, Object3DData>();
     // The corresponding opengl bounding boxes
     private Map<Object3DData, Object3DData> normals = new HashMap<Object3DData, Object3DData>();
     private Map<Object3DData, Object3DData> skeleton = new HashMap<>();
@@ -87,14 +86,7 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 
     @Override
     public void onSurfaceCreated(GL10 unused, EGLConfig config) {
-        // Set the background frame color
-        float[] backgroundColor = main.getMainActivity().getBackgroundColor();
         GLES20.glClearColor(0f, 0f, 0f, 0f);
-        //GLES20.glClearColor(backgroundColor[0], backgroundColor[1], backgroundColor[2], backgroundColor[3]);
-
-        // Use culling to remove back faces.
-        // Don't remove back faces so we can see them
-        // GLES20.glEnable(GLES20.GL_CULL_FACE);
 
         // Enable depth testing for hidden-surface elimination.
         GLES20.glEnable(GLES20.GL_DEPTH_TEST);
@@ -115,7 +107,7 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
         // Adjust the viewport based on geometry changes, such as screen rotation
         GLES20.glViewport(0, 0, width, height);
 
-        // INFO: Set the camera2 position (View matrix)
+        // INFO: Set the SceneCamera position (View matrix)
         // The camera2 has 3 vectors (the position, the vector where we are looking at, and the up position (sky)
         SceneLoader scene = main.getMainActivity().getScene();
         SceneCamera sceneCamera = scene.getSceneCamera();
@@ -137,7 +129,7 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
         // Draw background color
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
-        SceneLoader scene = main.getMainActivity().getScene();
+        scene = main.getMainActivity().getScene();
         if (scene == null) {
             // scene not ready
             return;
@@ -147,14 +139,14 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
         scene.onDrawFrame();
 
         // recalculate mvp matrix according to where we are looking at now
-        SceneCamera sceneCamera = scene.getSceneCamera();
+        sceneCamera = scene.getSceneCamera();
         if (sceneCamera.hasChanged()) {
             Matrix.setLookAtM(modelViewMatrix, 0, sceneCamera.xPos, sceneCamera.yPos, sceneCamera.zPos, sceneCamera.xView, sceneCamera.yView,
                     sceneCamera.zView, sceneCamera.xUp, sceneCamera.yUp, sceneCamera.zUp);
-            // Log.d("Camera2", "Changed! :"+camera2.ToStringVector());
             Matrix.multiplyMM(mvpMatrix, 0, modelProjectionMatrix, 0, modelViewMatrix, 0);
             sceneCamera.setChanged(false);
         }
+
 
         // draw light
         if (scene.isDrawLighting()) {
@@ -175,6 +167,7 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
             Object3DData objData = null;
             try {
                 objData = objects.get(i);
+
                 boolean changed = objData.isChanged();
 
                 Object3D drawerObject = drawer.getDrawer(objData, scene.isDrawTextures(), scene.isDrawLighting(),
@@ -197,25 +190,6 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
                 if (objData.getDrawMode() == GLES20.GL_POINTS){
                     Object3DImpl lightBulbDrawer = (Object3DImpl) drawer.getPointDrawer();
                     lightBulbDrawer.draw(objData,modelProjectionMatrix, modelViewMatrix, GLES20.GL_POINTS,lightPosInEyeSpace);
-                } else if (scene.isAnaglyph()){
-                    // TODO: implement anaglyph
-                } else if (scene.isDrawWireframe() && objData.getDrawMode() != GLES20.GL_POINTS
-                        && objData.getDrawMode() != GLES20.GL_LINES && objData.getDrawMode() != GLES20.GL_LINE_STRIP
-                        && objData.getDrawMode() != GLES20.GL_LINE_LOOP) {
-                    // Log.d("ModelRenderer","Drawing wireframe model...");
-                    try{
-                        // Only draw wireframes for objects having faces (triangles)
-                        Object3DData wireframe = wireframes.get(objData);
-                        if (wireframe == null || changed) {
-                            Log.i("ModelRenderer","Generating wireframe model...");
-                            wireframe = Object3DBuilder.buildWireframe(objData);
-                            wireframes.put(objData, wireframe);
-                        }
-                        drawerObject.draw(wireframe,modelProjectionMatrix,modelViewMatrix,wireframe.getDrawMode(),
-                                wireframe.getDrawSize(),textureId != null? textureId:-1, lightPosInEyeSpace);
-                    }catch(Error e){
-                        Log.e("ModelRenderer",e.getMessage(),e);
-                    }
                 } else if (scene.isDrawPoints() || objData.getFaces() == null || !objData.getFaces().loaded()){
                     drawerObject.draw(objData, modelProjectionMatrix, modelViewMatrix
                             ,GLES20.GL_POINTS, objData.getDrawSize(),
@@ -234,17 +208,6 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
                 } else {
                     drawerObject.draw(objData, modelProjectionMatrix, modelViewMatrix,
                             textureId != null ? textureId : -1, lightPosInEyeSpace);
-                }
-
-                // Draw bounding box
-                if (scene.isDrawBoundingBox() || scene.getSelectedObject() == objData) {
-                    Object3DData boundingBoxData = boundingBoxes.get(objData);
-                    if (boundingBoxData == null || changed) {
-                        boundingBoxData = Object3DBuilder.buildBoundingBox(objData);
-                        boundingBoxes.put(objData, boundingBoxData);
-                    }
-                    Object3D boundingBoxDrawer = drawer.getBoundingBoxDrawer();
-                    boundingBoxDrawer.draw(boundingBoxData, modelProjectionMatrix, modelViewMatrix, -1, null);
                 }
 
                 // Draw normals
@@ -285,4 +248,6 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
     public float[] getModelViewMatrix() {
         return modelViewMatrix;
     }
+
+    public SceneLoader getSceneLoader() { return scene; }
 }

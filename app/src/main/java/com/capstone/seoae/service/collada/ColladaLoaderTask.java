@@ -2,7 +2,6 @@ package com.capstone.seoae.service.collada;
 
 import android.app.Activity;
 import android.content.res.AssetManager;
-import android.net.Uri;
 
 import com.capstone.seoae.model.Object3DData;
 import com.capstone.seoae.service.LoaderTask;
@@ -10,8 +9,6 @@ import com.capstone.seoae.service.collada.entities.AnimatedModelData;
 import com.capstone.seoae.service.collada.loader.ColladaLoader;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
 import java.util.List;
 
 public class ColladaLoaderTask extends LoaderTask {

@@ -2,7 +2,6 @@ package com.capstone.seoae;
 
 import android.graphics.PixelFormat;
 import android.opengl.GLSurfaceView;
-import android.view.MotionEvent;
 
 public class ModelSurfaceView extends GLSurfaceView {
 
@@ -22,14 +21,6 @@ public class ModelSurfaceView extends GLSurfaceView {
         mRenderer = new ModelRenderer(this);
         setRenderer(mRenderer);
         getHolder().setFormat(PixelFormat.RGBA_8888);
-
-
-        // This is the actual renderer of the 3D space
-
-        // Render the view only when there is a change in the drawing data
-        // TODO: enable this?
-        // setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
-
     }
 
     public MainActivity getMainActivity() {

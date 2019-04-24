@@ -1,13 +1,10 @@
 package com.capstone.seoae;
 
-import android.content.res.AssetManager;
-import android.net.Uri;
 import android.os.SystemClock;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.capstone.seoae.animation.Animator;
-import com.capstone.seoae.collision.CollisionDetection;
 import com.capstone.seoae.model.Object3DData;
 import com.capstone.seoae.model.SceneCamera;
 import com.capstone.seoae.service.LoaderTask;
@@ -18,14 +15,9 @@ import com.capstone.seoae.util.ContentsUtils;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class SceneLoader implements LoaderTask.Callback {
-    /**
-     * Default model color: yellow
-     */
-    private static float[] DEFAULT_COLOR = {1.0f, 1.0f, 0, 1.0f};
     /**
      * Parent component
      */
@@ -35,21 +27,13 @@ public class SceneLoader implements LoaderTask.Callback {
      */
     private List<Object3DData> objects = new ArrayList<Object3DData>();
     /**
-     * Point of view camera2
+     * Point of view SceneCamera
      */
     private SceneCamera sceneCamera;
-    /**
-     * Whether to draw objects as wireframes
-     */
-    private boolean drawWireframe = false;
     /**
      * Whether to draw using points
      */
     private boolean drawingPoints = false;
-    /**
-     * Whether to draw bounding boxes around objects
-     */
-    private boolean drawBoundingBox = false;
     /**
      * Whether to draw face normals. Normally used to debug models
      */
@@ -65,7 +49,7 @@ public class SceneLoader implements LoaderTask.Callback {
     /**
      * Light toggle feature: whether to draw using lights
      */
-    private boolean drawLighting = true;
+    private boolean drawLighting = false;
     /**
      * Animate model (dae only) or not
      */
@@ -74,18 +58,6 @@ public class SceneLoader implements LoaderTask.Callback {
      * Draw skeleton or not
      */
     private boolean drawSkeleton = false;
-    /**
-     * Toggle collision detection
-     */
-    private boolean isCollision = false;
-    /**
-     * Toggle 3d anaglyph
-     */
-    private boolean isAnaglyph = false;
-    /**
-     * Object selected by the user
-     */
-    private Object3DData selectedObject = null;
     /**
      * Initial light position
      */
@@ -99,10 +71,6 @@ public class SceneLoader implements LoaderTask.Callback {
      */
     private Animator animator = new Animator();
     /**
-     * Did the user touched the model for the first time?
-     */
-    private boolean userHasInteracted;
-    /**
      * time when model loading has started (for stats)
      */
     private long startTime;
@@ -113,10 +81,8 @@ public class SceneLoader implements LoaderTask.Callback {
 
     public void init() {
 
-        // Camera2 to show a point of view
+        // SceneCamera to show a point of view
         sceneCamera = new SceneCamera();
-
-
         startTime = SystemClock.uptimeMillis();
         try {
             new ColladaLoaderTask(parent, ContentsUtils.providedModel.get("cowboy.dae"), this).execute();
@@ -146,13 +112,11 @@ public class SceneLoader implements LoaderTask.Callback {
 
         animateLight();
 
-        // smooth camera2 transition
+        // smooth SceneCamera transition
         sceneCamera.animate();
-
-        // initial camera2 animation. animate if user didn't touch the screen
-        if (!userHasInteracted) {
-            animateCamera();
-        }
+        // initial SceneCamera animation.
+        // TODO : 카메라가 계속 일정 방향으로 움직이게 하는 부분 모델 회전부분만 참고하고 지워도 될것 같다.
+        //animateCamera(0f,0f);
 
         if (objects.isEmpty()) return;
 
@@ -173,8 +137,9 @@ public class SceneLoader implements LoaderTask.Callback {
         lightPoint.setRotationY(angleInDegrees);
     }
 
-    private void animateCamera(){
-        sceneCamera.translateCamera(0f, 0f);
+    protected void animateCamera(float dx, float dy){
+        //sceneCamera.RotateCamera(10f,2,0,0);
+        sceneCamera.translateCamera(dx, dy);
     }
 
     synchronized void addObject(Object3DData obj) {
@@ -195,21 +160,8 @@ public class SceneLoader implements LoaderTask.Callback {
         return objects;
     }
 
-    public boolean isDrawWireframe() {
-        return this.drawWireframe;
-    }
-
     public boolean isDrawPoints() {
         return this.drawingPoints;
-    }
-
-    public void toggleBoundingBox() {
-        this.drawBoundingBox = !drawBoundingBox;
-        requestRender();
-    }
-
-    public boolean isDrawBoundingBox() {
-        return drawBoundingBox;
     }
 
     public boolean isDrawNormals() {
@@ -233,14 +185,6 @@ public class SceneLoader implements LoaderTask.Callback {
         return drawSkeleton;
     }
 
-    public boolean isCollision() {
-        return isCollision;
-    }
-
-    public boolean isAnaglyph() {
-        return isAnaglyph;
-    }
-
     @Override
     public void onStart(){
         ContentsUtils.setThreadActivity(parent);
@@ -248,7 +192,7 @@ public class SceneLoader implements LoaderTask.Callback {
 
     @Override
     public void onLoadComplete(List<Object3DData> datas) {
-        // TODO: move texture load to LoaderTask
+        // Load Texture Part.
         for (Object3DData data : datas) {
             if (data.getTextureData() == null && data.getTextureFile() != null) {
                 Log.i("LoaderTask","Loading texture... "+data.getTextureFile());
@@ -261,7 +205,6 @@ public class SceneLoader implements LoaderTask.Callback {
                 }
             }
         }
-        // TODO: move error alert to LoaderTask
         List<String> allErrors = new ArrayList<>();
         for (Object3DData data : datas) {
             addObject(data);
@@ -272,60 +215,11 @@ public class SceneLoader implements LoaderTask.Callback {
         }
         final String elapsed = (SystemClock.uptimeMillis() - startTime) / 1000 + " secs";
         makeToastText("Build complete (" + elapsed + ")", Toast.LENGTH_LONG);
-        //ContentsUtils.setThreadActivity(null);
     }
 
     @Override
     public void onLoadError(Exception ex) {
         Log.e("SceneLoader", ex.getMessage(), ex);
         makeToastText("There was a problem building the model: " + ex.getMessage(), Toast.LENGTH_LONG);
-        //ContentsUtils.setThreadActivity(null);
-    }
-
-    public Object3DData getSelectedObject() {
-        return selectedObject;
-    }
-
-    private void setSelectedObject(Object3DData selectedObject) {
-        this.selectedObject = selectedObject;
-    }
-
-    public void loadTexture(Object3DData obj, AssetManager.AssetInputStream inputStream) throws IOException {
-        if (obj == null && objects.size() != 1) {
-            makeToastText("Unavailable", Toast.LENGTH_SHORT);
-            return;
-        }
-        obj = obj != null ? obj : objects.get(0);
-        obj.setTextureData(ContentsUtils.read(inputStream));
-        this.drawTextures = true;
-    }
-
-    public void processTouch(float x, float y) {
-        ModelRenderer mr = parent.getGLView().getModelRenderer();
-        Object3DData objectToSelect = CollisionDetection.getBoxIntersection(getObjects(), mr.getWidth(), mr.getHeight
-                (), mr.getModelViewMatrix(), mr.getModelProjectionMatrix(), x, y);
-        if (objectToSelect != null) {
-            if (getSelectedObject() == objectToSelect) {
-                Log.i("SceneLoader", "Unselected object " + objectToSelect.getId());
-                setSelectedObject(null);
-            } else {
-                Log.i("SceneLoader", "Selected object " + objectToSelect.getId());
-                setSelectedObject(objectToSelect);
-            }
-            if (isCollision()) {
-                Log.d("SceneLoader", "Detecting collision...");
-
-                float[] point = CollisionDetection.getTriangleIntersection(getObjects(), mr.getWidth(), mr.getHeight
-                        (), mr.getModelViewMatrix(), mr.getModelProjectionMatrix(), x, y);
-                if (point != null) {
-                    Log.i("SceneLoader", "Drawing intersection point: " + Arrays.toString(point));
-                    addObject(Object3DBuilder.buildPoint(point).setColor(new float[]{1.0f, 0f, 0f, 1f}));
-                }
-            }
-        }
-    }
-
-    public void processMove(float dx1, float dy1) {
-        userHasInteracted = true;
     }
 }

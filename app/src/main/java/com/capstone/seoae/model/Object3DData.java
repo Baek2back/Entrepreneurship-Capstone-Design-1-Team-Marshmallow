@@ -1,11 +1,9 @@
 package com.capstone.seoae.model;
 
-import android.net.Uri;
 import android.opengl.GLES20;
 import android.opengl.Matrix;
 import android.util.Log;
 
-import com.capstone.seoae.collision.Octree;
 import com.capstone.seoae.service.wavefront.WavefrontLoader;
 import com.capstone.seoae.util.Math3DUtils;
 
@@ -67,9 +65,6 @@ public class Object3DData {
     private byte[] textureData = null;
     private List<InputStream> textureStreams = null;
 
-    // derived data
-    private BoundingBox boundingBox;
-
     // Transformation data
     protected float[] position = new float[] { 0f, 0f, 0f };
     protected float[] rotation = new float[] { 0f, 0f, 0f };
@@ -86,9 +81,6 @@ public class Object3DData {
     // Async Loader
     private WavefrontLoader.ModelDimensions modelDimensions;
     private WavefrontLoader loader;
-
-    // collision detection
-    private Octree octree = null;
 
     // errors detected
     private List<String> errors = new ArrayList<>();
@@ -148,13 +140,6 @@ public class Object3DData {
         return modelDimensions;
     }
 
-    public void setOctree(Octree octree){
-        this.octree = octree;
-    }
-
-    public Octree getOctree(){
-        return octree;
-    }
 
     /**
      * Can be called when the faces were loaded asynchronously
@@ -301,9 +286,20 @@ public class Object3DData {
         updateModelMatrix();
         return this;
     }
+    public Object3DData setRotationX(float rotX) {
+        this.rotation[0] = rotX;
+        updateModelMatrix();
+        return this;
+    }
 
     public Object3DData setRotationY(float rotY) {
         this.rotation[1] = rotY;
+        updateModelMatrix();
+        return this;
+    }
+
+    public Object3DData setRotationZ(float rotZ) {
+        this.rotation[2] = rotZ;
         updateModelMatrix();
         return this;
     }
@@ -312,7 +308,7 @@ public class Object3DData {
         Matrix.setIdentityM(modelMatrix,0);
         Matrix.setRotateM(modelMatrix,0,getRotationX(),1,0,0);
         Matrix.setRotateM(modelMatrix,0,getRotationY(),0,1,0);
-        Matrix.setRotateM(modelMatrix,0,getRotationY(),0,0,1);
+        Matrix.setRotateM(modelMatrix,0,getRotationZ(),0,0,1);
         Matrix.scaleM(modelMatrix,0,getScaleX(),getScaleY(),getScaleZ());
         Matrix.translateM(modelMatrix,0,getPositionX(),getPositionY(),getPositionZ());
     }
@@ -343,14 +339,6 @@ public class Object3DData {
         this.drawOrderBuffer = drawBuffer;
         return this;
     }
-
-	/*public File getCurrentDir() {
-		return currentDir;
-	}
-
-	public void setCurrentDir(File currentDir) {
-		this.currentDir = currentDir;
-	}*/
 
     public void setUri(InputStream inputStream) {
         this.inputStream = inputStream;
@@ -674,16 +662,6 @@ public class Object3DData {
         return bb;
     }
 
-    public BoundingBox getBoundingBox() {
-        FloatBuffer vertexBuffer = getVertexBuffer();
-        if (vertexBuffer == null){
-            vertexBuffer = getVertexArrayBuffer();
-        }
-        if (boundingBox == null) {
-            boundingBox = BoundingBox.create(getId()+"_BoundingBox", vertexBuffer, getModelMatrix());
-        }
-        return boundingBox;
-    }
 
     public void center(float[] newPosition) {
         // calculate a scale factor

@@ -10,30 +10,7 @@
     <com.capstone.seoae.CameraSurface
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|end"
-        android:layout_margin="16dp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/openBrowser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        app:backgroundTint="@color/colorPrimaryLight"
-        app:srcCompat="@drawable/ic_open_in_browser_white_24dp"
-        app:useCompatPadding="true" />
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/requestRoute"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:visibility="invisible"
-        app:backgroundTint="@color/colorPrimaryLight"
-        app:srcCompat="@drawable/ic_direction_walk_white_24dp"
-        app:useCompatPadding="true"/>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/indicateDirection"
         android:layout_width="wrap_content"
@@ -43,6 +20,25 @@
         app:backgroundTint="@color/colorPrimaryLight"
         app:srcCompat="@drawable/ic_navigation_white_48dp"
         app:useCompatPadding="true"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/moveCurrent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        app:backgroundTint="@color/colorPrimaryLight"
+        app:srcCompat="@drawable/ic_location_searching_white_24dp"
+        app:useCompatPadding="true" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/requestRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        app:backgroundTint="@color/colorPrimaryLight"
+        app:srcCompat="@drawable/ic_direction_walk_white_24dp"
+        app:useCompatPadding="true" />
+
     <FrameLayout
         android:id="@+id/frameMap"
         android:layout_gravity="top"

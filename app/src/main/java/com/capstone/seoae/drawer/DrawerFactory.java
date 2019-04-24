@@ -25,10 +25,6 @@ public class DrawerFactory {
     private Object3D object3dv11;
     private Object3D object3dv12;
 
-    public Object3D getBoundingBoxDrawer() {
-        return object3dv2;
-    }
-
     public Object3D getFaceNormalsDrawer() {
         return object3dv1;
     }

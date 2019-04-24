@@ -1,6 +1,5 @@
 package com.capstone.seoae.service.collada.loader;
 
-import android.content.res.AssetManager;
 import android.opengl.GLES20;
 import android.util.Log;
 
@@ -22,12 +21,8 @@ import com.capstone.seoae.service.wavefront.WavefrontLoader;
 import com.capstone.seoae.xml.XmlNode;
 import com.capstone.seoae.xml.XmlParser;
 
-import org.apache.commons.io.IOUtils;
-
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
