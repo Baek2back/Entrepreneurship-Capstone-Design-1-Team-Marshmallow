@@ -1,11 +1,6 @@
 package com.capstone.seoae;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.os.Bundle;
-import android.provider.SyncStateContract;
-
 import com.daimajia.androidanimations.library.Techniques;
 import com.viksaa.sssplash.lib.activity.AwesomeSplash;
 import com.viksaa.sssplash.lib.cnst.Flags;
@@ -42,12 +37,12 @@ public class SplashScreen extends AwesomeSplash {
 
 
         //Customize Title
-        configSplash.setTitleSplash("Seoae");
+        configSplash.setTitleSplash("서애");
         //configSplash.setTitleTextColor(R.color.Wheat);
         configSplash.setTitleTextSize(30f); //float value
         configSplash.setAnimTitleDuration(3000);
         configSplash.setAnimTitleTechnique(Techniques.FlipInX);
-        //configSplash.setTitleFont("fonts/myfont.ttf"); //provide string to your font located in assets/fonts/
+        configSplash.setTitleFont("fonts/EBS주시경체B.ttf"); //provide string to your font located in assets/fonts/
 
     }
 
