@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
@@ -51,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //상태 바 없애기
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
         /* assets 폴더에 저장되어 있는 모델 및 텍스쳐 Load를 위해 AssetManager 사용.
            사용하기 희망하는 파일 명을 HashMap에 등록하여 전달하게 된다. */
