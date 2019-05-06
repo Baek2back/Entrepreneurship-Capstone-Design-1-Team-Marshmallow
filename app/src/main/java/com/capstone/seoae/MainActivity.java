@@ -2,6 +2,8 @@ package com.capstone.seoae;
 
 import android.annotation.SuppressLint;
 import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.location.Location;
@@ -134,6 +136,16 @@ public class MainActivity extends AppCompatActivity {
         tMapView.setTrackingMode(true);
         // TODO : 현재는 대청마루를 목적지로 설정해 두었음. 추후에 경유지 혹은 목적지 추가 해야함.
         TMapPoint daecheong = new TMapPoint(37.561278, 126.997088);
+
+        TMapMarkerItem markerItem1 = new TMapMarkerItem();
+        // 마커 아이콘
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.tiger);
+
+        markerItem1.setIcon(bitmap); // 마커 아이콘 지정
+        markerItem1.setPosition(0.5f, 1.0f); // 마커의 중심점을 중앙, 하단으로 설정
+        markerItem1.setTMapPoint( daecheong ); // 마커의 좌표 지정
+        markerItem1.setName("대청마루"); // 마커의 타이틀 지정
+        tMapView.addMarkerItem("markerItem1", markerItem1); // 지도에 마커 추가
         frameMap.addView(tMapView);
         setDestination(daecheong);
         initSensor();
@@ -177,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
         {
             try {
                 findViewById(R.id.indicateDirection).setVisibility(View.VISIBLE);
-                tMapView.setZoomLevel(18);
+                tMapView.setZoomLevel(12);
                 TMapData tMapData = new TMapData();
                 Location currentLocation = gpsManager.getCurrentLocation();
                 final TMapPoint startPoint = new TMapPoint(currentLocation.getLatitude(), currentLocation.getLongitude());
@@ -185,6 +197,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onFindPathData(TMapPolyLine tMapPolyLine) {
                         // tMapView에 현재 위치에서 목적지까지의 경로를 그려준다.
+                        //tMapView.setUserScrollZoomEnable(true);
                         tMapView.addTMapPath(tMapPolyLine);
                         // Line Point ArrayList
                         ArrayList<TMapPoint> linePoints = tMapPolyLine.getLinePoint();
