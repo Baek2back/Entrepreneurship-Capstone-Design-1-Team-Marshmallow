@@ -3,13 +3,12 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.capstone.seoae"
-        minSdkVersion 24
+        applicationId "com.marshmallow.project"
+        minSdkVersion 26
         targetSdkVersion 28
-        versionCode 7
-        versionName "1.3"
-        vectorDrawables.useSupportLibrary true
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -17,26 +16,24 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    lintOptions {
-        abortOnError false
-    }
     compileOptions {
-        targetCompatibility 1.8
-        sourceCompatibility 1.8
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
-    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'com.google.android.material:material:1.0.0'
-    implementation 'com.github.ViksaaSkool:AwesomeSplash:v1.0.0'
-    implementation files('libs/com.skt.Tmap_1.59.jar')
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:animated-vector-drawable:28.0.0'
+    implementation 'com.android.support:exifinterface:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-building-v7:0.5.0'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.37.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    }
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }

@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/baek2/Desktop/navigation/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-id/values-id.xml",
+            "map": [
+                {
+                    "source": "/Users/baek2/.gradle/caches/transforms-2/files-2.1/28274316e08bf8c61a09f47d479d4689/res/values-id/values-id.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "57",
+                        "endOffsets": "108"
+                    }
+                },
+                {
+                    "source": "/Users/baek2/.gradle/caches/transforms-2/files-2.1/0d9719b2d328977fa137a1f94164744b/res/values-id/values-id.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,105,157",
+                        "endColumns": "49,51,52",
+                        "endOffsets": "100,152,205"
+                    },
+                    "to": {
+                        "startLines": "3,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "113,163,215",
+                        "endColumns": "49,51,52",
+                        "endOffsets": "158,210,263"
+                    }
+                }
+            ]
+        }
+    ]
+}

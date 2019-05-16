@@ -1,49 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/containerView"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorWindowBackground"
-    tools:context="com.capstone.seoae.MainActivity">
-    <com.capstone.seoae.CameraSurface
+    android:layout_height="match_parent">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLng="-43.334931"
+        mapbox:mapbox_cameraZoom="0.346515"
+        />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/indicateDirection"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/navigationButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top|end"
-        android:visibility="invisible"
-        app:backgroundTint="@color/colorPrimaryLight"
-        app:srcCompat="@drawable/ic_navigation_white_48dp"
-        app:useCompatPadding="true"/>
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:tint="@android:color/white"
+        app:backgroundTint="@color/mapboxGrayLight"
+        app:srcCompat="@drawable/round_navigation_24" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/moveCurrent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|left"
-        app:backgroundTint="@color/colorPrimaryLight"
-        app:srcCompat="@drawable/ic_location_searching_white_24dp"
-        app:useCompatPadding="true" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/requestRoute"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        app:backgroundTint="@color/colorPrimaryLight"
-        app:srcCompat="@drawable/ic_direction_walk_white_24dp"
-        app:useCompatPadding="true" />
-
-    <FrameLayout
-        android:id="@+id/frameMap"
-        android:layout_gravity="top"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:backgroundTint="@color/colorPrimaryLight">
-    </FrameLayout>
-</FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

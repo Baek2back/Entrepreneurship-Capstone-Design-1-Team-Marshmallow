@@ -1,0 +1,55 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/baek2/Desktop/navigation/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/Users/baek2/.gradle/caches/transforms-2/files-2.1/0d9719b2d328977fa137a1f94164744b/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,112,173,238,296",
+                        "endColumns": "56,60,64,57,50",
+                        "endOffsets": "107,168,233,291,342"
+                    },
+                    "to": {
+                        "startLines": "5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "264,321,382,447,505",
+                        "endColumns": "56,60,64,57,50",
+                        "endOffsets": "316,377,442,500,551"
+                    }
+                },
+                {
+                    "source": "/Users/baek2/.gradle/caches/transforms-2/files-2.1/aa430a84c140cfe1b648737333a3ae30/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "10",
+                        "endOffsets": "222"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "556",
+                        "endLines": "13",
+                        "endColumns": "10",
+                        "endOffsets": "723"
+                    }
+                },
+                {
+                    "source": "/Users/baek2/.gradle/caches/transforms-2/files-2.1/9e923534e54e8caba88e65ab7443ea67/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                }
+            ]
+        }
+    ]
+}
