@@ -1,14 +1,25 @@
 package com.marshmallow.project;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.location.Location;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.view.ViewPager;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.util.TypedValue;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 // Classes needed to initialize the map
+import com.astuetz.PagerSlidingTabStrip;
 import com.mapbox.geojson.Point;
 import com.mapbox.mapboxsdk.camera.CameraPosition;
 import com.mapbox.mapboxsdk.Mapbox;
@@ -33,6 +44,9 @@ import com.mapbox.mapboxsdk.location.LocationComponentActivationOptions;
 import com.mapbox.mapboxsdk.location.modes.CameraMode;
 import com.mapbox.mapboxsdk.location.modes.RenderMode;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Use the Mapbox Core Library to listen to device location updates
  */
@@ -51,10 +65,20 @@ public class MainActivity extends AppCompatActivity implements
     // Variables needed to listen to location updates
     private MainActivityLocationCallback callback = new MainActivityLocationCallback(this);
 
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.tabs)
+    PagerSlidingTabStrip tabs;
+    @BindView(R.id.pager)
+    ViewPager pager;
+
+    private MyPagerAdapter adapter;
+    private Drawable oldBackground = null;
+    private int currentColor;
+    //private SystemBarTintManager mTintManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         // Mapbox access token is configured here. This needs to be called either in your application
         // object or in the same activity which contains the mapview.
         Mapbox.getInstance(this, getString(R.string.access_token));
@@ -66,6 +90,35 @@ public class MainActivity extends AppCompatActivity implements
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
 
+        ButterKnife.bind(this);
+        //setSupportActionBar(toolbar);
+        if(GlobalVariables.category=="history") {
+            toolbar.setTitle(R.string.history);
+        }
+        else{
+            toolbar.setTitle(R.string.movie);
+        }
+
+        // create our manager instance after the content view is set
+        //mTintManager = new SystemBarTintManager(this);
+        // enable status bar tint
+        //mTintManager.setStatusBarTintEnabled(true);
+        adapter = new MyPagerAdapter(getSupportFragmentManager());
+        pager.setAdapter(adapter);
+        tabs.setViewPager(pager);
+
+        final int pageMargin = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, getResources()
+                .getDisplayMetrics());
+        pager.setPageMargin(pageMargin);
+        pager.setCurrentItem(0);
+        //changeColor(ContextCompat.getColor(getBaseContext(), R.color.green));
+
+        tabs.setOnTabReselectedListener(new PagerSlidingTabStrip.OnTabReselectedListener() {
+            @Override
+            public void onTabReselected(int position) {
+                Toast.makeText(MainActivity.this, "Tab reselected: " + position, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -87,8 +140,9 @@ public class MainActivity extends AppCompatActivity implements
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, NavigationActivity.class);
                 intent.putExtra("currentPoint",callback.getCurrentPoint());
+                intent.putExtra("type",1);
                 startActivity(intent);
-            }
+        }
         });
     }
 
@@ -221,6 +275,52 @@ public class MainActivity extends AppCompatActivity implements
                 return currentPoint;
             }
             return null;
+        }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    /*@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_contact:
+                QuickContactFragment.newInstance().show(getSupportFragmentManager(), "QuickContactFragment");
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }*/
+
+    public class MyPagerAdapter extends FragmentPagerAdapter {
+
+        private String[] TITLES = {"Seoae-ro", "Home of Yoo Seong-ryong", "Korea House", "Namsangol village"};
+        private String[] movieTitles = {"Daehan Cinema", "Ohzemi Film Studio", "The White Pub"};
+
+        MyPagerAdapter(FragmentManager fm) {
+            super(fm);
+            if(GlobalVariables.category == "movie"){
+                setTitle(movieTitles);
+            }
+        }
+
+        public void setTitle(String[] titles){
+            TITLES = titles;
+        }
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return TITLES[position];
+        }
+
+        @Override
+        public int getCount() {
+            return TITLES.length;
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return SuperAwesomeCardFragment.newInstance(position);
         }
     }
 

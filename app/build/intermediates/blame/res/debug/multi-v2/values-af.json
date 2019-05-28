@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/baek2/Desktop/navigation/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-af/values-af.xml",
+            "outputFile": "C:\\Users\\gustj\\AndroidStudioProjects\\seoae\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-af\\values-af.xml",
             "map": [
                 {
-                    "source": "/Users/baek2/.gradle/caches/transforms-2/files-2.1/9e923534e54e8caba88e65ab7443ea67/res/values-af/values-af.xml",
+                    "source": "C:\\Users\\gustj\\.gradle\\caches\\transforms-2\\files-2.1\\eb0977b68ab91d7431f4b48a366ab925\\res\\values-af\\values-af.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/baek2/.gradle/caches/transforms-2/files-2.1/c1eb345049c72e7a78d0cbb533ba9aef/res/values-af/values-af.xml",
+                    "source": "C:\\Users\\gustj\\.gradle\\caches\\transforms-2\\files-2.1\\bc59345148e08ab0555fabc627046b3a\\res\\values-af\\values-af.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

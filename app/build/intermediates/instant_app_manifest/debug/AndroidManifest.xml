@@ -31,15 +31,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name="com.marshmallow.project.MainActivity" >
+        android:theme="@style/Theme.AppCompat.NoActionBar" >
+        <activity android:name="com.marshmallow.project.MainActivity" />
+        <activity android:name="com.marshmallow.project.NavigationActivity" />
+        <activity
+            android:name="com.marshmallow.project.SplashActivity"
+            android:theme="@style/SplashTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.marshmallow.project.NavigationActivity" />
         <activity
             android:name="com.mapbox.mapboxsdk.plugins.places.autocomplete.ui.PlaceAutocompleteActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
@@ -67,6 +70,10 @@
             android:authorities="com.marshmallow.project.mapboxtelemetryinitprovider"
             android:exported="false"
             android:initOrder="100" />
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="com.marshmallow.project.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
     </application>
 
 </manifest>

@@ -1,346 +1,365 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:2:1-23:12
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/47f49ca0aeedceed1f0a2acb7704d67b/AndroidManifest.xml:2:1-20:12
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-building-v7:0.5.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/9016cbad16a601c92602c1018e4a37d9/AndroidManifest.xml:2:1-9:12
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/0d9719b2d328977fa137a1f94164744b/AndroidManifest.xml:2:1-13:12
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-annotation-v7:0.6.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/43c05ebd3b7fe65a9faaf973bf31c6e3/AndroidManifest.xml:2:1-9:12
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] /Users/baek2/.gradle/caches/transforms-2/files-2.1/fb9e8242beee57f37f2da6e158617c80/AndroidManifest.xml:2:1-20:12
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/28274316e08bf8c61a09f47d479d4689/AndroidManifest.xml:2:1-17:12
-MERGED from [com.android.support:design:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/aa430a84c140cfe1b648737333a3ae30/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/9e923534e54e8caba88e65ab7443ea67/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c89092391fbc051afc738d6e89103486/AndroidManifest.xml:17:1-22:12
-MERGED from [com.squareup.picasso:picasso:2.71828] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c62781861d311b1428f0384647ca675e/AndroidManifest.xml:2:1-14:12
-MERGED from [com.android.support:exifinterface:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/2c2d89cb9b49cfedbef2c86318f3576f/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/baek2/.gradle/caches/transforms-2/files-2.1/d8af21c330657978cf2cd8c03b104571/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-v4:27.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/f861e2d2a6a93da07d25ec0ddaacefa4/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/45cf6a3e0ff3d6f93355d0a13cabdfb8/AndroidManifest.xml:17:1-30:12
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/0c729efa87940af7fdad123c21e8347b/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/ad316a1f9ca50d42b042622c36bd0f66/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/2b4c28b178940d4bb30ca18bd78f2aa0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:2:1-24:12
-MERGED from [android.arch.persistence.room:runtime:1.1.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/d16befcdea2764c86042d71e0c1b1f79/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c4cf261ece7ab7aa3e35d3961997004b/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/08ba3c0ca1a73d515c698f10c732dc7a/AndroidManifest.xml:17:1-22:12
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-gestures:0.4.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/55230e8520a67b550fd14a0bd789694f/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:loader:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/277b81058545906f8e9e5c84a5eabbe4/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/faa2ac8d19e87aafdf404c65bc0598f2/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/4aa69144edcabd7afd1e91112d5450ea/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/d58ffbe3cad8985fcc4a655d04191114/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/3b4720564ea19eec5f7609077d5f281f/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/8af20f1e63a51426fbf7139b1f0b9bd9/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/1842e1c0a41122d4decaaa75a2e908da/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/75ad567f358f95cc45d26ccda2409a2c/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/920d1b17ef2c5909187047bdaba0c4eb/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/eb6441e534e7ed361d970101f964ac32/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c1eb345049c72e7a78d0cbb533ba9aef/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/ba02234f22c985662754a63056dac111/AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/796a4658938fd0120ba5f42a169fc95a/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/ea446fd9f731ae7ea705cfa8a32d81c5/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/024fff744059955c51adc412a0fbd8fc/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/f6119508f24d62f22e05ef260af1627d/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/bf9674d2fff35290923f654e7800d188/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/4f695dd09e55870c9f0e4a00d79ed377/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/307ad9ac286626daf71d5c5341cba141/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/366fb376c3fc4178be2c56344014fe6c/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/769e162aeb6800a25a97fd3991020c60/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/faff977e7eeba12b66d249617e330def/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/dc60fb5fe18d637786a93ac57cde81ee/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.persistence:db-framework:1.1.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/e318bef8db42a7f935774f19d0ce1b9b/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.persistence:db:1.1.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/13b0eb4d818071a50da2ef93926dd198/AndroidManifest.xml:17:1-22:12
-MERGED from [com.getkeepsafe.relinker:relinker:1.3.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/759f77292cea8b5f21adb0152afe324b/AndroidManifest.xml:2:1-7:12
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-core:1.2.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/2152bcd38cb31388ee97145e54738bfa/AndroidManifest.xml:2:1-14:12
-MERGED from [com.mapbox.navigator:mapbox-navigation-native:6.1.3] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c6642c0b46e206a3fa66d7b7a7709cf2/AndroidManifest.xml:2:1-7:12
-MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/6cf0827f3bc80698287865f4279fd129/AndroidManifest.xml:2:1-9:12
-INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:2:1-23:12
+ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:2:1-24:12
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\9912e4e774a644f8a37e8938ec11aa37\AndroidManifest.xml:2:1-20:12
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-building-v7:0.5.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\5916b08c50f4c181e942af25d1afdd7c\AndroidManifest.xml:2:1-9:12
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\5e13205310a95bc9228a0830eb40ef8f\AndroidManifest.xml:2:1-13:12
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-annotation-v7:0.6.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\4c423fbf2eaf1d2d98e55e6d78e025c8\AndroidManifest.xml:2:1-9:12
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\716974dcc05fe6257bbaa51ba7eb1bf7\AndroidManifest.xml:2:1-20:12
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\92d2b13e072d21f30ef4e77e4cf06dc8\AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.support:design:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\6ce3a9e3ec9442d23d288dd1ca1df422\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\eb0977b68ab91d7431f4b48a366ab925\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\111eccb60bdd80e873038bd3a8c3c726\AndroidManifest.xml:17:1-22:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\cc6a829763c958ff4bbb5e8f2c85ef8e\AndroidManifest.xml:2:1-14:12
+MERGED from [com.android.support:exifinterface:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\d5790eadee5800a5f5a892f1aeebdf4c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b346540c019f5c49d82854182cec3401\AndroidManifest.xml:2:1-11:12
+MERGED from [com.jpardogo.materialtabstrip:library:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\ef1a9f7de2d96cb45392039ba7695cc4\AndroidManifest.xml:2:1-11:12
+MERGED from [com.jakewharton:butterknife:8.5.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\3c8c09b89d970479181d43d00f3876c6\AndroidManifest.xml:2:1-7:12
+MERGED from [com.github.navasmdc:MaterialDesign:1.5] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\fc82111cace16e9cdeae562fa273ec97\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\11e17a2339dec9fafc19646ac3242250\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\72551045240b1b77c51d6328faf0209a\AndroidManifest.xml:17:1-30:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\5626cad27dd2fa8cac42c0e27cb87aa9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\0c31c4172942003696b9374cc3f509d1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\82c8eb1528c02907e3979671df9430d6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:2:1-24:12
+MERGED from [android.arch.persistence.room:runtime:1.1.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\1816f078648b7130e0a88762d678455f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\246f8c904f425345e16659eadeafb4f6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b04ba78d8099f7474140a9542eb49d92\AndroidManifest.xml:17:1-22:12
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-gestures:0.4.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\894474aa39ddd05618ba5d539fc8a065\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\65b0ce18e9dedaef87c4fe892e019e95\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\aaf557a657a975c2014e156cc3e9111f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\0e34ffad64bef772f5ca755d81962c69\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\cc4314017c536fe2d346a3726e635e75\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b890e536cb89d5d36ed4e8ea9bdf1e53\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\da434b2dbbf929c5ece995e4f80648c4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c4e181e3957c829bc403c0447f01a712\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\8f19e3a78fae1a9d309becdb37ab1642\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\7502543d688be1aa01b13badc041e667\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\4f071d516f0d8de736beab8eb52204e0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\bc59345148e08ab0555fabc627046b3a\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\63850eb5ceeafbceaa03ad7e553cb00c\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\eab9f8b49ce8d7a3cc62387c7ff00f47\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\4bd37d4ca654418b51afa02324edbb1b\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\1ea5f9439b38cfd81d0c494032dd47d0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\e5b5ccbc5a951f871f22cf1cbc67fbef\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\81833bceec483016e9200466fd066248\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\0a75e72d5016389d081c4c1e73bfbf9f\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\42d338ab4dee0389eed3bc20b332a02b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\1a6a70c178a901f2ceaa6f935e47f399\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\ab4688ffce2ac8786939a3ea05c7e9e1\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\183c0fb7fad0d306aafab6944c97282c\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\9f1d4e49ee3dfab7c18a7653cb52e037\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence:db-framework:1.1.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\61cc02066d192c93c2c6431a38e6bf8b\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence:db:1.1.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\0624c1deffa756a291c26685cdde73e1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.getkeepsafe.relinker:relinker:1.3.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\cac9b3ca8725d089cbfc7c8387c3ab76\AndroidManifest.xml:2:1-7:12
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-core:1.2.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b0a4269b443c0ae89cf967b0a2686ed3\AndroidManifest.xml:2:1-14:12
+MERGED from [com.mapbox.navigator:mapbox-navigation-native:6.1.3] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b86ff010d66f99f4007f6352205675f4\AndroidManifest.xml:2:1-7:12
+MERGED from [com.jakewharton.timber:timber:4.7.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\da9c9f5d975a5a921afd916ce6b5be4c\AndroidManifest.xml:2:1-9:12
+INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:2:1-24:12
 	package
-		ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:3:5-38
-		INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:3:5-38
+		INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml
-		ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:2:1-23:12
-		INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:2:1-24:12
+		INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml
-		ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:2:1-23:12
-		INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:2:1-24:12
+		INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:5:5-79
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:11:5-79
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:11:5-79
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-core:1.2.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/2152bcd38cb31388ee97145e54738bfa/AndroidManifest.xml:11:5-79
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-core:1.2.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/2152bcd38cb31388ee97145e54738bfa/AndroidManifest.xml:11:5-79
+ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:5:5-79
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:11:5-79
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:11:5-79
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-core:1.2.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b0a4269b443c0ae89cf967b0a2686ed3\AndroidManifest.xml:11:5-79
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-core:1.2.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b0a4269b443c0ae89cf967b0a2686ed3\AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:5:22-76
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:5:22-76
 application
-ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:7:5-22:19
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/47f49ca0aeedceed1f0a2acb7704d67b/AndroidManifest.xml:9:5-18:19
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/47f49ca0aeedceed1f0a2acb7704d67b/AndroidManifest.xml:9:5-18:19
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/0d9719b2d328977fa137a1f94164744b/AndroidManifest.xml:9:5-11:19
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/0d9719b2d328977fa137a1f94164744b/AndroidManifest.xml:9:5-11:19
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/28274316e08bf8c61a09f47d479d4689/AndroidManifest.xml:11:5-15:19
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/28274316e08bf8c61a09f47d479d4689/AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.support:design:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/aa430a84c140cfe1b648737333a3ae30/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/aa430a84c140cfe1b648737333a3ae30/AndroidManifest.xml:22:5-20
-MERGED from [com.squareup.picasso:picasso:2.71828] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c62781861d311b1428f0384647ca675e/AndroidManifest.xml:7:5-12:19
-MERGED from [com.squareup.picasso:picasso:2.71828] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c62781861d311b1428f0384647ca675e/AndroidManifest.xml:7:5-12:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/baek2/.gradle/caches/transforms-2/files-2.1/d8af21c330657978cf2cd8c03b104571/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/baek2/.gradle/caches/transforms-2/files-2.1/d8af21c330657978cf2cd8c03b104571/AndroidManifest.xml:9:5-20
-MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/45cf6a3e0ff3d6f93355d0a13cabdfb8/AndroidManifest.xml:22:5-28:19
-MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/45cf6a3e0ff3d6f93355d0a13cabdfb8/AndroidManifest.xml:22:5-28:19
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:16:5-22:19
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:16:5-22:19
-MERGED from [com.android.support:support-compat:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c1eb345049c72e7a78d0cbb533ba9aef/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c1eb345049c72e7a78d0cbb533ba9aef/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/ba02234f22c985662754a63056dac111/AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/ba02234f22c985662754a63056dac111/AndroidManifest.xml:22:5-23:19
-MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/6cf0827f3bc80698287865f4279fd129/AndroidManifest.xml:7:5-20
-MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/6cf0827f3bc80698287865f4279fd129/AndroidManifest.xml:7:5-20
+ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:7:5-23:19
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\9912e4e774a644f8a37e8938ec11aa37\AndroidManifest.xml:9:5-18:19
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\9912e4e774a644f8a37e8938ec11aa37\AndroidManifest.xml:9:5-18:19
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\5e13205310a95bc9228a0830eb40ef8f\AndroidManifest.xml:9:5-11:19
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\5e13205310a95bc9228a0830eb40ef8f\AndroidManifest.xml:9:5-11:19
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\92d2b13e072d21f30ef4e77e4cf06dc8\AndroidManifest.xml:11:5-15:19
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\92d2b13e072d21f30ef4e77e4cf06dc8\AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:design:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\6ce3a9e3ec9442d23d288dd1ca1df422\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\6ce3a9e3ec9442d23d288dd1ca1df422\AndroidManifest.xml:22:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\cc6a829763c958ff4bbb5e8f2c85ef8e\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\cc6a829763c958ff4bbb5e8f2c85ef8e\AndroidManifest.xml:7:5-12:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b346540c019f5c49d82854182cec3401\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b346540c019f5c49d82854182cec3401\AndroidManifest.xml:9:5-20
+MERGED from [com.jpardogo.materialtabstrip:library:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\ef1a9f7de2d96cb45392039ba7695cc4\AndroidManifest.xml:9:5-20
+MERGED from [com.jpardogo.materialtabstrip:library:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\ef1a9f7de2d96cb45392039ba7695cc4\AndroidManifest.xml:9:5-20
+MERGED from [com.github.navasmdc:MaterialDesign:1.5] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\fc82111cace16e9cdeae562fa273ec97\AndroidManifest.xml:11:5-47
+MERGED from [com.github.navasmdc:MaterialDesign:1.5] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\fc82111cace16e9cdeae562fa273ec97\AndroidManifest.xml:11:5-47
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\72551045240b1b77c51d6328faf0209a\AndroidManifest.xml:22:5-28:19
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\72551045240b1b77c51d6328faf0209a\AndroidManifest.xml:22:5-28:19
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:16:5-22:19
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:16:5-22:19
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\bc59345148e08ab0555fabc627046b3a\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\bc59345148e08ab0555fabc627046b3a\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\63850eb5ceeafbceaa03ad7e553cb00c\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\63850eb5ceeafbceaa03ad7e553cb00c\AndroidManifest.xml:22:5-23:19
+MERGED from [com.jakewharton.timber:timber:4.7.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\da9c9f5d975a5a921afd916ce6b5be4c\AndroidManifest.xml:7:5-20
+MERGED from [com.jakewharton.timber:timber:4.7.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\da9c9f5d975a5a921afd916ce6b5be4c\AndroidManifest.xml:7:5-20
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c1eb345049c72e7a78d0cbb533ba9aef/AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\bc59345148e08ab0555fabc627046b3a\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:10:9-41
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:10:9-41
 	android:roundIcon
-		ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:11:9-54
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:11:9-54
 	android:icon
-		ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:9:9-43
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:8:9-35
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:13:9-40
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:13:9-59
 activity#com.marshmallow.project.MainActivity
-ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:14:9-20:20
+ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:14:9-82
 	android:name
-		ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:14:19-70
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:15:13-19:29
-action#android.intent.action.MAIN
-ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:16:17-69
-	android:name
-		ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:16:25-66
-category#android.intent.category.LAUNCHER
-ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:18:17-77
-	android:name
-		ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:18:27-74
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:14:19-70
 activity#com.marshmallow.project.NavigationActivity
-ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:21:9-88
+ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:15:9-88
 	android:name
-		ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml:21:19-76
-uses-sdk
-INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml
-INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/47f49ca0aeedceed1f0a2acb7704d67b/AndroidManifest.xml:5:5-7:41
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/47f49ca0aeedceed1f0a2acb7704d67b/AndroidManifest.xml:5:5-7:41
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-building-v7:0.5.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/9016cbad16a601c92602c1018e4a37d9/AndroidManifest.xml:5:5-7:41
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-building-v7:0.5.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/9016cbad16a601c92602c1018e4a37d9/AndroidManifest.xml:5:5-7:41
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/0d9719b2d328977fa137a1f94164744b/AndroidManifest.xml:5:5-7:41
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/0d9719b2d328977fa137a1f94164744b/AndroidManifest.xml:5:5-7:41
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-annotation-v7:0.6.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/43c05ebd3b7fe65a9faaf973bf31c6e3/AndroidManifest.xml:5:5-7:41
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-annotation-v7:0.6.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/43c05ebd3b7fe65a9faaf973bf31c6e3/AndroidManifest.xml:5:5-7:41
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] /Users/baek2/.gradle/caches/transforms-2/files-2.1/fb9e8242beee57f37f2da6e158617c80/AndroidManifest.xml:5:5-7:41
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] /Users/baek2/.gradle/caches/transforms-2/files-2.1/fb9e8242beee57f37f2da6e158617c80/AndroidManifest.xml:5:5-7:41
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/28274316e08bf8c61a09f47d479d4689/AndroidManifest.xml:5:5-7:41
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/28274316e08bf8c61a09f47d479d4689/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:design:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/aa430a84c140cfe1b648737333a3ae30/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/aa430a84c140cfe1b648737333a3ae30/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/9e923534e54e8caba88e65ab7443ea67/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/9e923534e54e8caba88e65ab7443ea67/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c89092391fbc051afc738d6e89103486/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c89092391fbc051afc738d6e89103486/AndroidManifest.xml:20:5-44
-MERGED from [com.squareup.picasso:picasso:2.71828] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c62781861d311b1428f0384647ca675e/AndroidManifest.xml:5:5-44
-MERGED from [com.squareup.picasso:picasso:2.71828] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c62781861d311b1428f0384647ca675e/AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:exifinterface:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/2c2d89cb9b49cfedbef2c86318f3576f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:exifinterface:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/2c2d89cb9b49cfedbef2c86318f3576f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/baek2/.gradle/caches/transforms-2/files-2.1/d8af21c330657978cf2cd8c03b104571/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/baek2/.gradle/caches/transforms-2/files-2.1/d8af21c330657978cf2cd8c03b104571/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-v4:27.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/f861e2d2a6a93da07d25ec0ddaacefa4/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/f861e2d2a6a93da07d25ec0ddaacefa4/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/45cf6a3e0ff3d6f93355d0a13cabdfb8/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/45cf6a3e0ff3d6f93355d0a13cabdfb8/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/0c729efa87940af7fdad123c21e8347b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/0c729efa87940af7fdad123c21e8347b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/ad316a1f9ca50d42b042622c36bd0f66/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/ad316a1f9ca50d42b042622c36bd0f66/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/2b4c28b178940d4bb30ca18bd78f2aa0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/2b4c28b178940d4bb30ca18bd78f2aa0/AndroidManifest.xml:20:5-44
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:7:5-9:41
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:7:5-9:41
-MERGED from [android.arch.persistence.room:runtime:1.1.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/d16befcdea2764c86042d71e0c1b1f79/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence.room:runtime:1.1.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/d16befcdea2764c86042d71e0c1b1f79/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c4cf261ece7ab7aa3e35d3961997004b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c4cf261ece7ab7aa3e35d3961997004b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/08ba3c0ca1a73d515c698f10c732dc7a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/08ba3c0ca1a73d515c698f10c732dc7a/AndroidManifest.xml:20:5-44
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-gestures:0.4.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/55230e8520a67b550fd14a0bd789694f/AndroidManifest.xml:7:5-9:41
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-gestures:0.4.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/55230e8520a67b550fd14a0bd789694f/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:loader:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/277b81058545906f8e9e5c84a5eabbe4/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/277b81058545906f8e9e5c84a5eabbe4/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/faa2ac8d19e87aafdf404c65bc0598f2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/faa2ac8d19e87aafdf404c65bc0598f2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/4aa69144edcabd7afd1e91112d5450ea/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/4aa69144edcabd7afd1e91112d5450ea/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/d58ffbe3cad8985fcc4a655d04191114/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/d58ffbe3cad8985fcc4a655d04191114/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/3b4720564ea19eec5f7609077d5f281f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/3b4720564ea19eec5f7609077d5f281f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/8af20f1e63a51426fbf7139b1f0b9bd9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/8af20f1e63a51426fbf7139b1f0b9bd9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/1842e1c0a41122d4decaaa75a2e908da/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/1842e1c0a41122d4decaaa75a2e908da/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/75ad567f358f95cc45d26ccda2409a2c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/75ad567f358f95cc45d26ccda2409a2c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/920d1b17ef2c5909187047bdaba0c4eb/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/920d1b17ef2c5909187047bdaba0c4eb/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/eb6441e534e7ed361d970101f964ac32/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/eb6441e534e7ed361d970101f964ac32/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c1eb345049c72e7a78d0cbb533ba9aef/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c1eb345049c72e7a78d0cbb533ba9aef/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/ba02234f22c985662754a63056dac111/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/ba02234f22c985662754a63056dac111/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/796a4658938fd0120ba5f42a169fc95a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/796a4658938fd0120ba5f42a169fc95a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/ea446fd9f731ae7ea705cfa8a32d81c5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/ea446fd9f731ae7ea705cfa8a32d81c5/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/024fff744059955c51adc412a0fbd8fc/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/024fff744059955c51adc412a0fbd8fc/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/f6119508f24d62f22e05ef260af1627d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/f6119508f24d62f22e05ef260af1627d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/bf9674d2fff35290923f654e7800d188/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/bf9674d2fff35290923f654e7800d188/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/4f695dd09e55870c9f0e4a00d79ed377/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/4f695dd09e55870c9f0e4a00d79ed377/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/307ad9ac286626daf71d5c5341cba141/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/307ad9ac286626daf71d5c5341cba141/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/366fb376c3fc4178be2c56344014fe6c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/366fb376c3fc4178be2c56344014fe6c/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/769e162aeb6800a25a97fd3991020c60/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/769e162aeb6800a25a97fd3991020c60/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/faff977e7eeba12b66d249617e330def/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/faff977e7eeba12b66d249617e330def/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/dc60fb5fe18d637786a93ac57cde81ee/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/dc60fb5fe18d637786a93ac57cde81ee/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence:db-framework:1.1.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/e318bef8db42a7f935774f19d0ce1b9b/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence:db-framework:1.1.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/e318bef8db42a7f935774f19d0ce1b9b/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence:db:1.1.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/13b0eb4d818071a50da2ef93926dd198/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.persistence:db:1.1.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/13b0eb4d818071a50da2ef93926dd198/AndroidManifest.xml:20:5-44
-MERGED from [com.getkeepsafe.relinker:relinker:1.3.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/759f77292cea8b5f21adb0152afe324b/AndroidManifest.xml:5:5-43
-MERGED from [com.getkeepsafe.relinker:relinker:1.3.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/759f77292cea8b5f21adb0152afe324b/AndroidManifest.xml:5:5-43
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-core:1.2.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/2152bcd38cb31388ee97145e54738bfa/AndroidManifest.xml:7:5-9:41
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-core:1.2.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/2152bcd38cb31388ee97145e54738bfa/AndroidManifest.xml:7:5-9:41
-MERGED from [com.mapbox.navigator:mapbox-navigation-native:6.1.3] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c6642c0b46e206a3fa66d7b7a7709cf2/AndroidManifest.xml:5:5-44
-MERGED from [com.mapbox.navigator:mapbox-navigation-native:6.1.3] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c6642c0b46e206a3fa66d7b7a7709cf2/AndroidManifest.xml:5:5-44
-MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/6cf0827f3bc80698287865f4279fd129/AndroidManifest.xml:5:5-43
-MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/6cf0827f3bc80698287865f4279fd129/AndroidManifest.xml:5:5-43
-INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml
-INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml
-	android:targetSdkVersion
-		INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml
-		ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml
-	android:minSdkVersion
-		INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml
-		ADDED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/baek2/Desktop/navigation/app/src/main/AndroidManifest.xml
-activity#com.mapbox.mapboxsdk.plugins.places.autocomplete.ui.PlaceAutocompleteActivity
-ADDED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/47f49ca0aeedceed1f0a2acb7704d67b/AndroidManifest.xml:10:9-14:68
-	android:windowSoftInputMode
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/47f49ca0aeedceed1f0a2acb7704d67b/AndroidManifest.xml:14:13-65
-	android:configChanges
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/47f49ca0aeedceed1f0a2acb7704d67b/AndroidManifest.xml:12:13-122
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:15:19-76
+activity#com.marshmallow.project.SplashActivity
+ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:16:9-22:20
 	android:theme
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/47f49ca0aeedceed1f0a2acb7704d67b/AndroidManifest.xml:13:13-62
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:17:13-47
 	android:name
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/47f49ca0aeedceed1f0a2acb7704d67b/AndroidManifest.xml:11:13-105
-activity#com.mapbox.mapboxsdk.plugins.places.picker.ui.PlacePickerActivity
-ADDED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/47f49ca0aeedceed1f0a2acb7704d67b/AndroidManifest.xml:15:9-17:125
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:16:19-72
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:18:13-21:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:19:17-68
+	android:name
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:19:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:20:17-77
+	android:name
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml:20:27-74
+uses-sdk
+INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\9912e4e774a644f8a37e8938ec11aa37\AndroidManifest.xml:5:5-7:41
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\9912e4e774a644f8a37e8938ec11aa37\AndroidManifest.xml:5:5-7:41
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-building-v7:0.5.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\5916b08c50f4c181e942af25d1afdd7c\AndroidManifest.xml:5:5-7:41
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-building-v7:0.5.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\5916b08c50f4c181e942af25d1afdd7c\AndroidManifest.xml:5:5-7:41
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\5e13205310a95bc9228a0830eb40ef8f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\5e13205310a95bc9228a0830eb40ef8f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-annotation-v7:0.6.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\4c423fbf2eaf1d2d98e55e6d78e025c8\AndroidManifest.xml:5:5-7:41
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-plugin-annotation-v7:0.6.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\4c423fbf2eaf1d2d98e55e6d78e025c8\AndroidManifest.xml:5:5-7:41
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\716974dcc05fe6257bbaa51ba7eb1bf7\AndroidManifest.xml:5:5-7:41
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\716974dcc05fe6257bbaa51ba7eb1bf7\AndroidManifest.xml:5:5-7:41
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\92d2b13e072d21f30ef4e77e4cf06dc8\AndroidManifest.xml:5:5-7:41
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\92d2b13e072d21f30ef4e77e4cf06dc8\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\6ce3a9e3ec9442d23d288dd1ca1df422\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\6ce3a9e3ec9442d23d288dd1ca1df422\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\eb0977b68ab91d7431f4b48a366ab925\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\eb0977b68ab91d7431f4b48a366ab925\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\111eccb60bdd80e873038bd3a8c3c726\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\111eccb60bdd80e873038bd3a8c3c726\AndroidManifest.xml:20:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\cc6a829763c958ff4bbb5e8f2c85ef8e\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\cc6a829763c958ff4bbb5e8f2c85ef8e\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:exifinterface:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\d5790eadee5800a5f5a892f1aeebdf4c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\d5790eadee5800a5f5a892f1aeebdf4c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b346540c019f5c49d82854182cec3401\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b346540c019f5c49d82854182cec3401\AndroidManifest.xml:5:5-7:41
+MERGED from [com.jpardogo.materialtabstrip:library:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\ef1a9f7de2d96cb45392039ba7695cc4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.jpardogo.materialtabstrip:library:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\ef1a9f7de2d96cb45392039ba7695cc4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.jakewharton:butterknife:8.5.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\3c8c09b89d970479181d43d00f3876c6\AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.5.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\3c8c09b89d970479181d43d00f3876c6\AndroidManifest.xml:5:5-43
+MERGED from [com.github.navasmdc:MaterialDesign:1.5] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\fc82111cace16e9cdeae562fa273ec97\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.navasmdc:MaterialDesign:1.5] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\fc82111cace16e9cdeae562fa273ec97\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\11e17a2339dec9fafc19646ac3242250\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\11e17a2339dec9fafc19646ac3242250\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\72551045240b1b77c51d6328faf0209a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\72551045240b1b77c51d6328faf0209a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\5626cad27dd2fa8cac42c0e27cb87aa9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\5626cad27dd2fa8cac42c0e27cb87aa9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\0c31c4172942003696b9374cc3f509d1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\0c31c4172942003696b9374cc3f509d1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\82c8eb1528c02907e3979671df9430d6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\82c8eb1528c02907e3979671df9430d6\AndroidManifest.xml:20:5-44
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:7:5-9:41
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:7:5-9:41
+MERGED from [android.arch.persistence.room:runtime:1.1.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\1816f078648b7130e0a88762d678455f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence.room:runtime:1.1.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\1816f078648b7130e0a88762d678455f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\246f8c904f425345e16659eadeafb4f6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\246f8c904f425345e16659eadeafb4f6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b04ba78d8099f7474140a9542eb49d92\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b04ba78d8099f7474140a9542eb49d92\AndroidManifest.xml:20:5-44
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-gestures:0.4.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\894474aa39ddd05618ba5d539fc8a065\AndroidManifest.xml:7:5-9:41
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-gestures:0.4.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\894474aa39ddd05618ba5d539fc8a065\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:loader:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\65b0ce18e9dedaef87c4fe892e019e95\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\65b0ce18e9dedaef87c4fe892e019e95\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\aaf557a657a975c2014e156cc3e9111f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\aaf557a657a975c2014e156cc3e9111f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\0e34ffad64bef772f5ca755d81962c69\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\0e34ffad64bef772f5ca755d81962c69\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\cc4314017c536fe2d346a3726e635e75\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\cc4314017c536fe2d346a3726e635e75\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b890e536cb89d5d36ed4e8ea9bdf1e53\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b890e536cb89d5d36ed4e8ea9bdf1e53\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\da434b2dbbf929c5ece995e4f80648c4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\da434b2dbbf929c5ece995e4f80648c4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c4e181e3957c829bc403c0447f01a712\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c4e181e3957c829bc403c0447f01a712\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\8f19e3a78fae1a9d309becdb37ab1642\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\8f19e3a78fae1a9d309becdb37ab1642\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\7502543d688be1aa01b13badc041e667\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\7502543d688be1aa01b13badc041e667\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\4f071d516f0d8de736beab8eb52204e0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\4f071d516f0d8de736beab8eb52204e0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\bc59345148e08ab0555fabc627046b3a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\bc59345148e08ab0555fabc627046b3a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\63850eb5ceeafbceaa03ad7e553cb00c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\63850eb5ceeafbceaa03ad7e553cb00c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\eab9f8b49ce8d7a3cc62387c7ff00f47\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\eab9f8b49ce8d7a3cc62387c7ff00f47\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\4bd37d4ca654418b51afa02324edbb1b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\4bd37d4ca654418b51afa02324edbb1b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\1ea5f9439b38cfd81d0c494032dd47d0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\1ea5f9439b38cfd81d0c494032dd47d0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\e5b5ccbc5a951f871f22cf1cbc67fbef\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\e5b5ccbc5a951f871f22cf1cbc67fbef\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\81833bceec483016e9200466fd066248\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\81833bceec483016e9200466fd066248\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\0a75e72d5016389d081c4c1e73bfbf9f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\0a75e72d5016389d081c4c1e73bfbf9f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\42d338ab4dee0389eed3bc20b332a02b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\42d338ab4dee0389eed3bc20b332a02b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\1a6a70c178a901f2ceaa6f935e47f399\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\1a6a70c178a901f2ceaa6f935e47f399\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\ab4688ffce2ac8786939a3ea05c7e9e1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\ab4688ffce2ac8786939a3ea05c7e9e1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\183c0fb7fad0d306aafab6944c97282c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\183c0fb7fad0d306aafab6944c97282c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\9f1d4e49ee3dfab7c18a7653cb52e037\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\9f1d4e49ee3dfab7c18a7653cb52e037\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db-framework:1.1.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\61cc02066d192c93c2c6431a38e6bf8b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db-framework:1.1.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\61cc02066d192c93c2c6431a38e6bf8b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db:1.1.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\0624c1deffa756a291c26685cdde73e1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db:1.1.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\0624c1deffa756a291c26685cdde73e1\AndroidManifest.xml:20:5-44
+MERGED from [com.getkeepsafe.relinker:relinker:1.3.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\cac9b3ca8725d089cbfc7c8387c3ab76\AndroidManifest.xml:5:5-43
+MERGED from [com.getkeepsafe.relinker:relinker:1.3.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\cac9b3ca8725d089cbfc7c8387c3ab76\AndroidManifest.xml:5:5-43
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-core:1.2.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b0a4269b443c0ae89cf967b0a2686ed3\AndroidManifest.xml:7:5-9:41
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-core:1.2.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b0a4269b443c0ae89cf967b0a2686ed3\AndroidManifest.xml:7:5-9:41
+MERGED from [com.mapbox.navigator:mapbox-navigation-native:6.1.3] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b86ff010d66f99f4007f6352205675f4\AndroidManifest.xml:5:5-44
+MERGED from [com.mapbox.navigator:mapbox-navigation-native:6.1.3] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b86ff010d66f99f4007f6352205675f4\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton.timber:timber:4.7.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\da9c9f5d975a5a921afd916ce6b5be4c\AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton.timber:timber:4.7.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\da9c9f5d975a5a921afd916ce6b5be4c\AndroidManifest.xml:5:5-43
+INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\gustj\AndroidStudioProjects\seoae\app\src\main\AndroidManifest.xml
+activity#com.mapbox.mapboxsdk.plugins.places.autocomplete.ui.PlaceAutocompleteActivity
+ADDED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\9912e4e774a644f8a37e8938ec11aa37\AndroidManifest.xml:10:9-14:68
+	android:windowSoftInputMode
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\9912e4e774a644f8a37e8938ec11aa37\AndroidManifest.xml:14:13-65
 	android:configChanges
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/47f49ca0aeedceed1f0a2acb7704d67b/AndroidManifest.xml:17:13-122
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\9912e4e774a644f8a37e8938ec11aa37\AndroidManifest.xml:12:13-122
+	android:theme
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\9912e4e774a644f8a37e8938ec11aa37\AndroidManifest.xml:13:13-62
 	android:name
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/47f49ca0aeedceed1f0a2acb7704d67b/AndroidManifest.xml:16:13-93
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\9912e4e774a644f8a37e8938ec11aa37\AndroidManifest.xml:11:13-105
+activity#com.mapbox.mapboxsdk.plugins.places.picker.ui.PlacePickerActivity
+ADDED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\9912e4e774a644f8a37e8938ec11aa37\AndroidManifest.xml:15:9-17:125
+	android:configChanges
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\9912e4e774a644f8a37e8938ec11aa37\AndroidManifest.xml:17:13-122
+	android:name
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-plugin-places-v7:0.7.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\9912e4e774a644f8a37e8938ec11aa37\AndroidManifest.xml:16:13-93
 activity#com.mapbox.services.android.navigation.ui.v5.MapboxNavigationActivity
-ADDED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/0d9719b2d328977fa137a1f94164744b/AndroidManifest.xml:10:9-106
+ADDED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\5e13205310a95bc9228a0830eb40ef8f\AndroidManifest.xml:10:9-106
 	android:name
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/0d9719b2d328977fa137a1f94164744b/AndroidManifest.xml:10:19-103
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\5e13205310a95bc9228a0830eb40ef8f\AndroidManifest.xml:10:19-103
 uses-feature#0x00020000
-ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] /Users/baek2/.gradle/caches/transforms-2/files-2.1/fb9e8242beee57f37f2da6e158617c80/AndroidManifest.xml:9:5-11:35
+ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\716974dcc05fe6257bbaa51ba7eb1bf7\AndroidManifest.xml:9:5-11:35
 	android:glEsVersion
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] /Users/baek2/.gradle/caches/transforms-2/files-2.1/fb9e8242beee57f37f2da6e158617c80/AndroidManifest.xml:10:9-41
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\716974dcc05fe6257bbaa51ba7eb1bf7\AndroidManifest.xml:10:9-41
 	android:required
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] /Users/baek2/.gradle/caches/transforms-2/files-2.1/fb9e8242beee57f37f2da6e158617c80/AndroidManifest.xml:11:9-32
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\716974dcc05fe6257bbaa51ba7eb1bf7\AndroidManifest.xml:11:9-32
 uses-feature#android.hardware.wifi
-ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] /Users/baek2/.gradle/caches/transforms-2/files-2.1/fb9e8242beee57f37f2da6e158617c80/AndroidManifest.xml:12:5-14:36
+ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\716974dcc05fe6257bbaa51ba7eb1bf7\AndroidManifest.xml:12:5-14:36
 	android:required
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] /Users/baek2/.gradle/caches/transforms-2/files-2.1/fb9e8242beee57f37f2da6e158617c80/AndroidManifest.xml:14:9-33
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\716974dcc05fe6257bbaa51ba7eb1bf7\AndroidManifest.xml:14:9-33
 	android:name
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] /Users/baek2/.gradle/caches/transforms-2/files-2.1/fb9e8242beee57f37f2da6e158617c80/AndroidManifest.xml:13:9-45
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\716974dcc05fe6257bbaa51ba7eb1bf7\AndroidManifest.xml:13:9-45
 uses-permission#android.permission.INTERNET
-ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] /Users/baek2/.gradle/caches/transforms-2/files-2.1/fb9e8242beee57f37f2da6e158617c80/AndroidManifest.xml:16:5-67
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:14:5-67
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:14:5-67
+ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\716974dcc05fe6257bbaa51ba7eb1bf7\AndroidManifest.xml:16:5-67
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:14:5-67
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:14:5-67
 	android:name
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] /Users/baek2/.gradle/caches/transforms-2/files-2.1/fb9e8242beee57f37f2da6e158617c80/AndroidManifest.xml:16:22-64
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\716974dcc05fe6257bbaa51ba7eb1bf7\AndroidManifest.xml:16:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] /Users/baek2/.gradle/caches/transforms-2/files-2.1/fb9e8242beee57f37f2da6e158617c80/AndroidManifest.xml:17:5-79
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:12:5-79
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:12:5-79
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-core:1.2.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/2152bcd38cb31388ee97145e54738bfa/AndroidManifest.xml:12:5-79
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-core:1.2.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/2152bcd38cb31388ee97145e54738bfa/AndroidManifest.xml:12:5-79
+ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\716974dcc05fe6257bbaa51ba7eb1bf7\AndroidManifest.xml:17:5-79
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:12:5-79
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:12:5-79
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-core:1.2.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b0a4269b443c0ae89cf967b0a2686ed3\AndroidManifest.xml:12:5-79
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-core:1.2.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\b0a4269b443c0ae89cf967b0a2686ed3\AndroidManifest.xml:12:5-79
 	android:name
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] /Users/baek2/.gradle/caches/transforms-2/files-2.1/fb9e8242beee57f37f2da6e158617c80/AndroidManifest.xml:17:22-76
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\716974dcc05fe6257bbaa51ba7eb1bf7\AndroidManifest.xml:17:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] /Users/baek2/.gradle/caches/transforms-2/files-2.1/fb9e8242beee57f37f2da6e158617c80/AndroidManifest.xml:18:5-76
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:13:5-76
-MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:13:5-76
+ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\716974dcc05fe6257bbaa51ba7eb1bf7\AndroidManifest.xml:18:5-76
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:13:5-76
+MERGED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:13:5-76
 	android:name
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] /Users/baek2/.gradle/caches/transforms-2/files-2.1/fb9e8242beee57f37f2da6e158617c80/AndroidManifest.xml:18:22-73
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\716974dcc05fe6257bbaa51ba7eb1bf7\AndroidManifest.xml:18:22-73
 uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/28274316e08bf8c61a09f47d479d4689/AndroidManifest.xml:9:5-77
+ADDED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\92d2b13e072d21f30ef4e77e4cf06dc8\AndroidManifest.xml:9:5-77
 	android:name
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/28274316e08bf8c61a09f47d479d4689/AndroidManifest.xml:9:22-74
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\92d2b13e072d21f30ef4e77e4cf06dc8\AndroidManifest.xml:9:22-74
 service#com.mapbox.services.android.navigation.v5.navigation.NavigationService
-ADDED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/28274316e08bf8c61a09f47d479d4689/AndroidManifest.xml:12:9-106
+ADDED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\92d2b13e072d21f30ef4e77e4cf06dc8\AndroidManifest.xml:12:9-106
 	android:name
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/28274316e08bf8c61a09f47d479d4689/AndroidManifest.xml:12:18-103
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\92d2b13e072d21f30ef4e77e4cf06dc8\AndroidManifest.xml:12:18-103
 service#com.mapbox.services.android.telemetry.service.TelemetryService
-ADDED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/28274316e08bf8c61a09f47d479d4689/AndroidManifest.xml:14:9-98
+ADDED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\92d2b13e072d21f30ef4e77e4cf06dc8\AndroidManifest.xml:14:9-98
 	android:name
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/28274316e08bf8c61a09f47d479d4689/AndroidManifest.xml:14:18-95
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.37.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\92d2b13e072d21f30ef4e77e4cf06dc8\AndroidManifest.xml:14:18-95
 provider#com.squareup.picasso.PicassoProvider
-ADDED from [com.squareup.picasso:picasso:2.71828] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c62781861d311b1428f0384647ca675e/AndroidManifest.xml:8:9-11:40
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\cc6a829763c958ff4bbb5e8f2c85ef8e\AndroidManifest.xml:8:9-11:40
 	android:authorities
-		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c62781861d311b1428f0384647ca675e/AndroidManifest.xml:10:13-72
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\cc6a829763c958ff4bbb5e8f2c85ef8e\AndroidManifest.xml:10:13-72
 	android:exported
-		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c62781861d311b1428f0384647ca675e/AndroidManifest.xml:11:13-37
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\cc6a829763c958ff4bbb5e8f2c85ef8e\AndroidManifest.xml:11:13-37
 	android:name
-		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/baek2/.gradle/caches/transforms-2/files-2.1/c62781861d311b1428f0384647ca675e/AndroidManifest.xml:9:13-64
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\cc6a829763c958ff4bbb5e8f2c85ef8e\AndroidManifest.xml:9:13-64
 provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
-ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/45cf6a3e0ff3d6f93355d0a13cabdfb8/AndroidManifest.xml:23:9-27:43
+ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\72551045240b1b77c51d6328faf0209a\AndroidManifest.xml:23:9-27:43
 	android:authorities
-		ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/45cf6a3e0ff3d6f93355d0a13cabdfb8/AndroidManifest.xml:25:13-68
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\72551045240b1b77c51d6328faf0209a\AndroidManifest.xml:25:13-68
 	android:multiprocess
-		ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/45cf6a3e0ff3d6f93355d0a13cabdfb8/AndroidManifest.xml:27:13-40
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\72551045240b1b77c51d6328faf0209a\AndroidManifest.xml:27:13-40
 	android:exported
-		ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/45cf6a3e0ff3d6f93355d0a13cabdfb8/AndroidManifest.xml:26:13-37
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\72551045240b1b77c51d6328faf0209a\AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/baek2/.gradle/caches/transforms-2/files-2.1/45cf6a3e0ff3d6f93355d0a13cabdfb8/AndroidManifest.xml:24:13-83
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\72551045240b1b77c51d6328faf0209a\AndroidManifest.xml:24:13-83
 provider#com.mapbox.android.telemetry.provider.MapboxTelemetryInitProvider
-ADDED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:17:9-21:39
+ADDED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:17:9-21:39
 	android:authorities
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:19:13-79
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:19:13-79
 	android:exported
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:20:13-37
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:20:13-37
 	android:initOrder
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:21:13-36
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:21:13-36
 	android:name
-		ADDED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] /Users/baek2/.gradle/caches/transforms-2/files-2.1/b5f53230f3e7bfae3cfc57ea6a103ca5/AndroidManifest.xml:18:13-93
+		ADDED from [com.mapbox.mapboxsdk:mapbox-android-telemetry:4.3.0] C:\Users\gustj\.gradle\caches\transforms-2\files-2.1\c1eb73d0e0fd970f7cc0ef2a5d911bfb\AndroidManifest.xml:18:13-93

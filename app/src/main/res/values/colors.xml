@@ -11,4 +11,8 @@
     <color name="mapboxRed">#b43b71</color>
     <color name="red">#FF0000</color>
     <color name="white">#FFFFFF</color>
+    <color name="background_window">#FFE5E5E5</color>
+    <color name="green">#689F38</color>
+    <color name="greenDark">#3E5F22</color>
+    <color name="banana">#FFCC00</color>
 </resources>

@@ -32,4 +32,12 @@
         <item name="navigationViewRouteStyle">@style/CustomNavigationMapRoute</item>
     </style>
 
+    <style name="DialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColorPrimary">@color/green</item>
+    </style>
+
+    <!-- Splash theme -->
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/contact</item>
+    </style>
 </resources>

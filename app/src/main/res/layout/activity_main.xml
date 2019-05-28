@@ -1,26 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:mapbox="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/toolbar"/>
+
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        tools:context=".MainActivity">
+    </android.support.v4.view.ViewPager>
 
     <com.mapbox.mapboxsdk.maps.MapView
         android:id="@+id/mapView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="1dp"
         mapbox:mapbox_cameraTargetLng="-43.334931"
-        mapbox:mapbox_cameraZoom="0.346515"
-        />
+        mapbox:mapbox_cameraZoom="0.346515" />
+
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/navigationButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
+        android:layout_gravity="bottom|end"
         android:tint="@android:color/white"
+        android:layout_margin="16dp"
         app:backgroundTint="@color/mapboxGrayLight"
         app:srcCompat="@drawable/round_navigation_24" />
 
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

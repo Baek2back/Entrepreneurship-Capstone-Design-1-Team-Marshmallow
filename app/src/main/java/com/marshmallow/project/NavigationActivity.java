@@ -98,6 +98,7 @@ public class NavigationActivity extends AppCompatActivity
         }
 
         Intent intent = getIntent();
+        Log.d("test",Integer.toString(intent.getIntExtra("type",1)));
         ORIGIN =  (Point)intent.getSerializableExtra("currentPoint");
         //ORIGIN = Point.fromLngLat(126.993550,37.561008);
         DESTINATION = Point.fromLngLat(126.993550, 37.559998);

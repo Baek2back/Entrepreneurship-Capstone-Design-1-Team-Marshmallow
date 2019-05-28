@@ -5,4 +5,21 @@
     <string name="user_location_permission_not_granted">You didn\'t grant location permissions.</string>
     <string name="new_location">New Location</string>
     <string name="current_night_mode" translatable="false">current_night_mode</string>
+    <string name="action_contact">Contact</string>
+    <string name="seoae_ro">The road is Seoae-ro. Seoae is nickname of a famous Korean politician named Yoo Seong-ryong. It is used to cherish his life.
+He led the war with Japan to victory. He promoted the famous Korean navy general named ‘Lee Sunsin’. Back then, Lee Sunsin was not famous. So it was quite difficult to promote him. His choice was really unconventional and thanks to his choice, Korean won against Japan. In addition to that, he made lots of good policies to recover from war damage.
+    </string>
+    <string name="home_of_yooseongryong">It was the place where Yoo Seong-ryong lived.</string>
+
+    <string name="korea_house">The Korea House is a Korean cultural space where you could experience Korean traditional food, art performances and exhibitions, or Korean traditional wedding.
+    The Korea House was originally a house of a famous Korean scholar named ‘Park Pangnyun’. After his death, it is used for a residence of vice supervisor of Japanese occupation, and also for the US government. After the remodeling in the 1980s, it had been changed into Korean cultural space.
+    </string>
+
+    <string name="namsangol_village">Namsangol Hanok Village is a restoration of Korean traditional village. You can imagine the lifestyle of the past of Korea. Also, you can feel the beauty of harmony with nature and Hanok. Hanok is a traditional Korean house. It’s really beautiful. It is There are a variety of performances and programs which you can experience Korean traditional things like Archery making, Natural Dying experience, Hanbok fitting, etc.
+    </string>
+    <string name="history">History</string>
+    <string name="movie">Movie</string>
+    <string name="daehan_cinema">Daehan Cinema is an icon of Chungmuro. It was opened in 1958 constructed by the 20century fox. It is famous for the first cinema that introduce the 70mm film projector.</string>
+    <string name="ohzemi_film_studio">Ohzemi film studio is a public media center managed by Seoul. There are lots of films, art books, editorial rooms, and film devices.</string>
+    <string name="white_pub">The White Pub is a famous old pub. Lots of Korean movie stars are regular here when they were university student.</string>
 </resources>
