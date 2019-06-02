@@ -83,7 +83,7 @@ public class NavigationActivity extends AppCompatActivity
     private Sensor accSensor,magSensor;
 
     private float bearing;
-
+    private String destination;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -101,8 +101,32 @@ public class NavigationActivity extends AppCompatActivity
         Log.d("test",Integer.toString(intent.getIntExtra("type",1)));
         ORIGIN =  (Point)intent.getSerializableExtra("currentPoint");
         //ORIGIN = Point.fromLngLat(126.993550,37.561008);
-        DESTINATION = Point.fromLngLat(126.993550, 37.559998);
-        //37.561008, 126.993550
+        destination = intent.getStringExtra("place");
+        switch(destination){
+            case "SEOAE-RO":
+                DESTINATION = Point.fromLngLat(126.993550, 37.559998);
+                break;
+            case "HOME OF YOO SEONG-RYONG":
+                DESTINATION = Point.fromLngLat(126.993550, 37.559998);
+                break;
+            case "KOREA HOUSE":
+                DESTINATION = Point.fromLngLat(126.993550, 37.559998);
+                break;
+            case "NAMSANGOL VILLAGE":
+                DESTINATION = Point.fromLngLat(126.993550, 37.559998);
+                break;
+            case "DAEHAN CINEMA":
+                DESTINATION = Point.fromLngLat(126.993550, 37.559998);
+                break;
+            case "OHZEMI FILM STUDIO":
+                DESTINATION = Point.fromLngLat(126.993550, 37.559998);
+                break;
+            case "THE WHITE PUB":
+                DESTINATION = Point.fromLngLat(126.993550, 37.559998);
+                break;
+        }
+
+
         setTheme(R.style.Theme_AppCompat_Light_NoActionBar);
         initNightMode();
         super.onCreate(savedInstanceState);

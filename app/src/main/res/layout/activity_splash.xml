@@ -58,14 +58,5 @@
         android:textSize="10sp"/>
     </LinearLayout>
 
-    <!--<RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <com.gc.materialdesign.views.ButtonFloat
-        android:id="@+id/buttonFloat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#1E88E5"
-        />
-    </RelativeLayout>-->
+   
 </RelativeLayout>

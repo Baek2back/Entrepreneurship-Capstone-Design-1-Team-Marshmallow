@@ -17,6 +17,8 @@
 package com.marshmallow.project;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewCompat;
@@ -26,6 +28,7 @@ import android.view.View;
 import android.view.ViewDebug;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -37,6 +40,8 @@ public class SuperAwesomeCardFragment extends Fragment {
 
 	@BindView(R.id.textView)
     TextView textView;
+	@BindView(R.id.imageView)
+	ImageView imageView;
 
 	private int position;
 
@@ -59,43 +64,46 @@ public class SuperAwesomeCardFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_card, container,false);
 		ButterKnife.bind(this, rootView);
 		ViewCompat.setElevation(rootView, 50);
-		if(GlobalVariables.category=="history") {
+		if(GlobalVariables.category == "history") {
 			switch (position) {
 				case 0:
 					textView.setText(getString(R.string.seoae_ro));
+					imageView.setImageResource(R.drawable.seoaero);
 					Log.d("test", Integer.toString(position));
 					break;
 				case 1:
 					textView.setText(getString(R.string.home_of_yooseongryong));
+					imageView.setImageResource(R.drawable.yooseongryong);
 					Log.d("test", Integer.toString(position));
 					break;
 				case 2:
 					textView.setText(getString(R.string.korea_house));
+					imageView.setImageResource(R.drawable.koreahouse);
 					Log.d("test", Integer.toString(position));
 					break;
 				case 3:
 					textView.setText(getString(R.string.namsangol_village));
+					imageView.setImageResource(R.drawable.namsangol);
 					Log.d("test", Integer.toString(position));
 					break;
 			}
 		}
-		else if(GlobalVariables.category=="movie")
+		else if(GlobalVariables.category == "movie")
 		{
 			switch (position) {
 				case 0:
 					textView.setText(getString(R.string.daehan_cinema));
+					imageView.setImageResource(R.drawable.daehan);
 					Log.d("test", Integer.toString(position));
 					break;
 				case 1:
 					textView.setText(getString(R.string.ohzemi_film_studio));
+					imageView.setImageResource(R.drawable.ohzemi);
 					Log.d("test", Integer.toString(position));
 					break;
 				case 2:
 					textView.setText(getString(R.string.white_pub));
-					Log.d("test", Integer.toString(position));
-					break;
-				case 3:
-					textView.setText(getString(R.string.namsangol_village));
+					imageView.setImageResource(R.drawable.whitepub);
 					Log.d("test", Integer.toString(position));
 					break;
 			}

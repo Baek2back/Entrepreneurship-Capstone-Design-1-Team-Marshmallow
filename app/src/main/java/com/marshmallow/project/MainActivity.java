@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements
 
         ButterKnife.bind(this);
         //setSupportActionBar(toolbar);
-        if(GlobalVariables.category=="history") {
+        if(GlobalVariables.category == "history") {
             toolbar.setTitle(R.string.history);
         }
         else{
@@ -141,8 +141,9 @@ public class MainActivity extends AppCompatActivity implements
                 Intent intent = new Intent(MainActivity.this, NavigationActivity.class);
                 intent.putExtra("currentPoint",callback.getCurrentPoint());
                 intent.putExtra("type",1);
+                intent.putExtra("place",adapter.getPageTitle(adapter.getItemPosition(adapter)));
                 startActivity(intent);
-        }
+            }
         });
     }
 
@@ -151,28 +152,28 @@ public class MainActivity extends AppCompatActivity implements
      */
     @SuppressWarnings( {"MissingPermission"})
     private void enableLocationComponent(@NonNull Style loadedMapStyle) {
-// Check if permissions are enabled and if not request
+        // Check if permissions are enabled and if not request
         if (PermissionsManager.areLocationPermissionsGranted(this)) {
 
-// Get an instance of the component
+        // Get an instance of the component
             LocationComponent locationComponent = mapboxMap.getLocationComponent();
 
-// Set the LocationComponent activation options
+        // Set the LocationComponent activation options
             LocationComponentActivationOptions locationComponentActivationOptions =
                     LocationComponentActivationOptions.builder(this, loadedMapStyle)
                             .useDefaultLocationEngine(true)
                             .build();
 
-// Activate with the LocationComponentActivationOptions object
+        // Activate with the LocationComponentActivationOptions object
             locationComponent.activateLocationComponent(locationComponentActivationOptions);
 
-// Enable to make component visible
+        // Enable to make component visible
             locationComponent.setLocationComponentEnabled(true);
 
-// Set the component's camera mode
+        // Set the component's camera mode
             locationComponent.setCameraMode(CameraMode.TRACKING);
 
-// Set the component's render mode
+        // Set the component's render mode
             locationComponent.setRenderMode(RenderMode.COMPASS);
 
 
@@ -308,6 +309,7 @@ public class MainActivity extends AppCompatActivity implements
         public void setTitle(String[] titles){
             TITLES = titles;
         }
+
         @Override
         public CharSequence getPageTitle(int position) {
             return TITLES[position];
