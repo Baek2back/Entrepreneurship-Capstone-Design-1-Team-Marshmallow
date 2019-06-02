@@ -18,7 +18,7 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="460dp"
         tools:context=".MainActivity">
     </android.support.v4.view.ViewPager>
 
@@ -29,15 +29,18 @@
         mapbox:mapbox_cameraTargetLng="-43.334931"
         mapbox:mapbox_cameraZoom="0.346515" />
 
-
+    <LinearLayout
+        android:id="@+id/linearlayout_main_footer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/navigationButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
         android:tint="@android:color/white"
-        android:layout_margin="16dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="20dp"
         app:backgroundTint="@color/mapboxGrayLight"
         app:srcCompat="@drawable/round_navigation_24" />
-
+    </LinearLayout>
 </LinearLayout>

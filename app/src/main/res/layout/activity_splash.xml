@@ -15,47 +15,51 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:gravity="center"
-            android:text="TITLE"
-            android:textSize="100sp"/>
+            android:text="SEOAE GO!"
+            android:textColor="#000000"
+            android:textSize="65sp"/>
     </LinearLayout>
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/linearlayout_splash_title"
         android:layout_marginTop="50dp">
-        <TextView
+        &lt;!&ndash;<TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="CONTENTS"
-            android:textSize="70sp"/>
-    </LinearLayout>
+            android:text="Choose Theme"
+            android:textSize="50sp"/>&ndash;&gt;
+    </LinearLayout>-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/relativelayout_buttoncontainer"
+        android:orientation="vertical"
         android:layout_marginTop="500dp">
     <com.gc.materialdesign.views.ButtonRectangle
         android:id="@+id/button_history"
-        android:layout_width="0dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="#1E88E5"
+        android:layout_gravity="center"
         android:text="History"
-        android:textSize="10sp"/>
+        android:textSize="10sp"
+        android:textColor="#000000"/>
 
     <com.gc.materialdesign.views.ButtonRectangle
         android:id="@+id/button_movie"
-        android:layout_width="0dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="#1E88E5"
+        android:layout_gravity="center"
         android:layout_alignParentRight="true"
         android:text="Movie"
-        android:textSize="10sp"/>
+        android:textSize="10sp"
+        android:textColor="#000000"/>
     </LinearLayout>
 
    

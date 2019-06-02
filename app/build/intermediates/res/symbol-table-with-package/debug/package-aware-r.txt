@@ -1614,6 +1614,7 @@ id left
 id line1
 id line3
 id linearLayout
+id linearlayout_main_footer
 id linearlayout_splash_title
 id listMode
 id list_item

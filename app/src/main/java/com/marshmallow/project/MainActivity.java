@@ -1,6 +1,7 @@
 package com.marshmallow.project;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,7 @@ import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -73,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements
     ViewPager pager;
 
     private MyPagerAdapter adapter;
+    private LinearLayout linearLayoutFooter;
     private Drawable oldBackground = null;
     private int currentColor;
     //private SystemBarTintManager mTintManager;
@@ -92,6 +95,13 @@ public class MainActivity extends AppCompatActivity implements
 
         ButterKnife.bind(this);
         //setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(Color.BLACK);
+        toolbar.setBackgroundColor(Color.rgb(214,163,84));
+        tabs.setBackgroundColor(Color.rgb(208,198,177));
+        tabs.setTextColor(Color.BLACK);
+        pager.setBackgroundColor(Color.rgb(208,198,177));
+        linearLayoutFooter = findViewById(R.id.linearlayout_main_footer);
+        linearLayoutFooter.setBackgroundColor(Color.BLACK);
         if(GlobalVariables.category == "history") {
             toolbar.setTitle(R.string.history);
         }
@@ -141,7 +151,7 @@ public class MainActivity extends AppCompatActivity implements
                 Intent intent = new Intent(MainActivity.this, NavigationActivity.class);
                 intent.putExtra("currentPoint",callback.getCurrentPoint());
                 intent.putExtra("type",1);
-                intent.putExtra("place",adapter.getPageTitle(adapter.getItemPosition(adapter)));
+               /* intent.putExtra("place",adapter.get);*/
                 startActivity(intent);
             }
         });

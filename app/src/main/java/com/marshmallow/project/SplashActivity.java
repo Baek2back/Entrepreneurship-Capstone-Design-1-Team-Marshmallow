@@ -3,6 +3,7 @@ package com.marshmallow.project;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -27,6 +28,9 @@ public class SplashActivity extends AppCompatActivity {
 
         historyButton = findViewById(R.id.button_history);
         movieButton = findViewById(R.id.button_movie);
+
+        historyButton.setBackgroundColor(Color.rgb(208,198,177));
+        movieButton.setBackgroundColor(Color.rgb(208,198,177));
 
         historyButton.setOnClickListener(new View.OnClickListener() {
             @Override

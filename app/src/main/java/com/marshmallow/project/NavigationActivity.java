@@ -100,31 +100,39 @@ public class NavigationActivity extends AppCompatActivity
         Intent intent = getIntent();
         Log.d("test",Integer.toString(intent.getIntExtra("type",1)));
         ORIGIN =  (Point)intent.getSerializableExtra("currentPoint");
+        DESTINATION = Point.fromLngLat(126.993550, 37.559998);
         //ORIGIN = Point.fromLngLat(126.993550,37.561008);
-        destination = intent.getStringExtra("place");
+        /*destination = intent.getStringExtra("place");
         switch(destination){
             case "SEOAE-RO":
+                Log.d("test","seoae");
                 DESTINATION = Point.fromLngLat(126.993550, 37.559998);
                 break;
             case "HOME OF YOO SEONG-RYONG":
+                Log.d("test","yooseongryong");
                 DESTINATION = Point.fromLngLat(126.993550, 37.559998);
                 break;
             case "KOREA HOUSE":
+                Log.d("test","koreahouse");
                 DESTINATION = Point.fromLngLat(126.993550, 37.559998);
                 break;
             case "NAMSANGOL VILLAGE":
+                Log.d("test","namsanvillage");
                 DESTINATION = Point.fromLngLat(126.993550, 37.559998);
                 break;
             case "DAEHAN CINEMA":
+                Log.d("test","daehancinema");
                 DESTINATION = Point.fromLngLat(126.993550, 37.559998);
                 break;
             case "OHZEMI FILM STUDIO":
+                Log.d("test","ohzemi");
                 DESTINATION = Point.fromLngLat(126.993550, 37.559998);
                 break;
             case "THE WHITE PUB":
+                Log.d("test","whitepub");
                 DESTINATION = Point.fromLngLat(126.993550, 37.559998);
                 break;
-        }
+        }*/
 
 
         setTheme(R.style.Theme_AppCompat_Light_NoActionBar);
