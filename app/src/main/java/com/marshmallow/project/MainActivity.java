@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements
         tabs.setTextColor(Color.BLACK);
         pager.setBackgroundColor(Color.rgb(208,198,177));
         linearLayoutFooter = findViewById(R.id.linearlayout_main_footer);
-        linearLayoutFooter.setBackgroundColor(Color.BLACK);
+        linearLayoutFooter.setBackgroundColor(Color.rgb(208,198,177));
         if(GlobalVariables.category == "history") {
             toolbar.setTitle(R.string.history);
         }

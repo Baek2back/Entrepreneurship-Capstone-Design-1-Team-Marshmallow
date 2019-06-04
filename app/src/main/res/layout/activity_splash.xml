@@ -17,7 +17,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
             android:gravity="center"
-            android:text="SEOAE GO!"
+            android:text="SEOAE\nROAD TOUR"
+            android:fontFamily="@font/custom1"
             android:textColor="#000000"
             android:textSize="65sp"/>
     </LinearLayout>
@@ -36,28 +37,31 @@
     </LinearLayout>-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:id="@+id/relativelayout_buttoncontainer"
         android:orientation="vertical"
         android:layout_marginTop="500dp">
-    <com.gc.materialdesign.views.ButtonRectangle
+
+        <com.gc.materialdesign.views.ButtonRectangle
         android:id="@+id/button_history"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_gravity="center"
         android:text="History"
+        android:fontFamily="@font/custom1"
         android:textSize="10sp"
         android:textColor="#000000"/>
 
-    <com.gc.materialdesign.views.ButtonRectangle
+        <com.gc.materialdesign.views.ButtonRectangle
         android:id="@+id/button_movie"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_gravity="center"
         android:layout_alignParentRight="true"
         android:text="Movie"
+        android:fontFamily="@font/custom1"
         android:textSize="10sp"
         android:textColor="#000000"/>
     </LinearLayout>

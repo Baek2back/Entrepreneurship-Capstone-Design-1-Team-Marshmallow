@@ -26,8 +26,8 @@ public class SplashActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION},0);
         }
 
-        historyButton = findViewById(R.id.button_history);
-        movieButton = findViewById(R.id.button_movie);
+        historyButton = (Button)findViewById(R.id.button_history);
+        movieButton = (Button)findViewById(R.id.button_movie);
 
         historyButton.setBackgroundColor(Color.rgb(208,198,177));
         movieButton.setBackgroundColor(Color.rgb(208,198,177));

@@ -1458,6 +1458,10 @@ drawable seoaero2
 drawable shadow_down
 drawable shadow_right
 drawable sound_chip_background
+drawable splash1
+drawable splash2
+drawable splash3
+drawable splash4
 drawable sprite_check
 drawable sub_banner_background
 drawable tabs_pattern
@@ -1468,6 +1472,8 @@ drawable turn_lane_background
 drawable wayname_text_background
 drawable whitepub
 drawable yooseongryong
+font custom1
+font ebsfont
 id ALT
 id CTRL
 id FUNCTION
